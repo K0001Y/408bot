@@ -83,12 +83,30 @@ async def upload_exam(file: UploadFile = File(...)):
         file.filename, file_id, len(content),
     )
 
+    # OCR 自动识别（不阻塞上传）
+    ocr_text = ""
+    ocr_error = None
+    try:
+        from app.utils.ocr import get_ocr_engine
+        engine = get_ocr_engine()
+        if engine.available:
+            ocr_text = engine.recognize(save_path)
+            if ocr_text:
+                logger.info("OCR 识别成功 file_id=%s chars=%d", file_id, len(ocr_text))
+        else:
+            ocr_error = "OCR 引擎未就绪"
+    except Exception as e:
+        ocr_error = str(e)
+        logger.warning("OCR 识别失败 file_id=%s error=%s", file_id, ocr_error)
+
     return {
         "file_id": file_id,
         "filename": file.filename,
         "saved_as": saved_name,
         "size": len(content),
-        "message": "文件上传成功。请在下方输入题目文本进行解析。",
+        "message": "文件上传成功" + ("，已自动识别文字。" if ocr_text else "。请在下方输入题目文本进行解析。"),
+        "ocr_text": ocr_text,
+        "ocr_error": ocr_error,
     }
 
 

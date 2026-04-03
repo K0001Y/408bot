@@ -97,7 +97,7 @@ class LLMFactory:
 
     @staticmethod
     def _create_ollama(settings: Settings, model: str | None, temperature: float | None) -> BaseChatModel:
-        from langchain_community.chat_models import ChatOllama
+        from langchain_ollama import ChatOllama
 
         cfg = settings.llm.ollama
         actual_model = model or cfg.model
@@ -113,32 +113,108 @@ class LLMFactory:
         return llm
 
     @staticmethod
-    def check_ollama_health() -> bool:
+    def check_ollama_health() -> dict:
         """
-        检查 Ollama 服务是否可用。
+        检查 Ollama 服务是否可用，并验证模型推理能力。
 
         Returns:
-            True 如果 Ollama 服务运行中，否则 False
+            dict: {
+                "reachable": bool,   # HTTP 服务是否可达
+                "models": list,      # 可用模型列表
+                "inference_ok": bool, # 推理是否正常
+                "error": str|None,   # 错误信息
+                "fix_hint": str|None # 修复建议
+            }
         """
         settings = get_settings()
         base_url = settings.llm.ollama.base_url
+        configured_model = settings.llm.ollama.model
+        result = {
+            "reachable": False,
+            "models": [],
+            "inference_ok": False,
+            "error": None,
+            "fix_hint": None,
+        }
 
+        # Step 1: 检查 HTTP 连接
         try:
             response = httpx.get(f"{base_url}/api/tags", timeout=5.0)
-            if response.status_code == 200:
-                data = response.json()
-                models = [m.get("name", "") for m in data.get("models", [])]
-                logger.info("Ollama 服务正常 可用模型=%s", models)
-                return True
-            else:
-                logger.warning("Ollama 响应异常 status=%d", response.status_code)
-                return False
+            if response.status_code != 200:
+                result["error"] = f"Ollama 响应异常 status={response.status_code}"
+                result["fix_hint"] = "请确保 Ollama 正在运行: ollama serve"
+                return result
+
+            data = response.json()
+            models = [m.get("name", "") for m in data.get("models", [])]
+            result["reachable"] = True
+            result["models"] = models
+            logger.info("Ollama 服务可达 可用模型=%s", models)
+
         except httpx.ConnectError:
-            logger.warning("Ollama 服务未运行 url=%s", base_url)
-            return False
+            result["error"] = f"Ollama 服务未运行 url={base_url}"
+            result["fix_hint"] = "请启动 Ollama: ollama serve"
+            logger.warning(result["error"])
+            return result
         except Exception as e:
-            logger.warning("Ollama 健康检查失败 error=%s", str(e))
-            return False
+            result["error"] = f"Ollama 连接失败: {str(e)}"
+            result["fix_hint"] = "请检查 Ollama 是否已安装并正确配置"
+            logger.warning(result["error"])
+            return result
+
+        # Step 2: 检查配置的模型是否已下载
+        model_found = any(configured_model in m for m in models)
+        if not model_found:
+            result["error"] = f"模型 '{configured_model}' 未在 Ollama 中找到"
+            result["fix_hint"] = f"请下载模型: ollama pull {configured_model}"
+            logger.warning(result["error"])
+            return result
+
+        # Step 3: 轻量推理测试 — 验证 runner 二进制可用
+        try:
+            test_response = httpx.post(
+                f"{base_url}/api/generate",
+                json={
+                    "model": configured_model,
+                    "prompt": "Hi",
+                    "stream": False,
+                    "options": {"num_predict": 1},  # 只生成 1 token
+                },
+                timeout=30.0,
+            )
+            if test_response.status_code == 200:
+                result["inference_ok"] = True
+                logger.info("Ollama 推理测试通过 model=%s", configured_model)
+            else:
+                body = test_response.text
+                result["error"] = f"Ollama 推理失败 status={test_response.status_code}: {body[:200]}"
+                if "no such file" in body.lower() or "fork/exec" in body.lower():
+                    result["fix_hint"] = (
+                        "Ollama runner 二进制文件缺失。请尝试:\n"
+                        "  1. 重启 Ollama 应用\n"
+                        "  2. 如仍不行，重新安装 Ollama: https://ollama.com/download"
+                    )
+                else:
+                    result["fix_hint"] = "请重启 Ollama 或重新下载模型"
+                logger.warning(result["error"])
+        except httpx.ReadTimeout:
+            # 超时但不一定是错误 — 模型可能正在加载
+            result["inference_ok"] = True
+            logger.info("Ollama 推理超时（模型可能正在加载），视为正常")
+        except Exception as e:
+            error_msg = str(e)
+            result["error"] = f"Ollama 推理测试异常: {error_msg}"
+            if "no such file" in error_msg.lower() or "fork/exec" in error_msg.lower():
+                result["fix_hint"] = (
+                    "Ollama runner 二进制文件缺失。请尝试:\n"
+                    "  1. 重启 Ollama 应用\n"
+                    "  2. 如仍不行，重新安装 Ollama: https://ollama.com/download"
+                )
+            else:
+                result["fix_hint"] = f"请检查 Ollama 日志并重启服务"
+            logger.warning(result["error"])
+
+        return result
 
     @staticmethod
     def create_embeddings():
@@ -162,7 +238,7 @@ class LLMFactory:
         logger.info("加载 Embedding 模型 model=%s device=%s", model_name, device)
 
         try:
-            from langchain_community.embeddings import HuggingFaceEmbeddings
+            from langchain_huggingface import HuggingFaceEmbeddings
 
             embeddings = HuggingFaceEmbeddings(
                 model_name=model_name,

@@ -20,7 +20,13 @@ export function ExamPage() {
     const file = e.target.files?.[0];
     if (!file) return;
     const res = await uploadLoader.run(() => api.uploadExam(file));
-    if (res) setUploadedFile(res.filename || file.name);
+    if (res) {
+      setUploadedFile(res.filename || file.name);
+      // 自动填入 OCR 识别结果
+      if (res.ocr_text) {
+        setQuestionText(res.ocr_text);
+      }
+    }
   };
 
   const handleAnalyze = async () => {

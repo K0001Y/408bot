@@ -41,6 +41,7 @@ class AppState:
         self.embeddings: Any = None         # Embedding 模型（SentenceTransformer）
         self.graph_data: dict | None = None # 知识图谱数据
         self.db_path: str = ""              # SQLite 数据库路径
+        self.llm_available: bool = False    # LLM 是否可用
 
         # Skills 注册表（在 lifespan 中填充）
         self.skills: dict[str, Any] = {}

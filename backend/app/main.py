@@ -98,55 +98,57 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error("知识图谱加载失败 error=%s", str(e), exc_info=True)
 
-    # 4. 初始化 SQLite (错题数据库)
+    # 4. 初始化 SQLite (错题数据库) — 使用迁移机制
     t0 = time.time()
     try:
-        import aiosqlite
-        import asyncio
-
         db_path = str(settings.mistakes.abs_db_path)
         db_path_obj = settings.mistakes.abs_db_path
         db_path_obj.parent.mkdir(parents=True, exist_ok=True)
         app_state.db_path = db_path
 
-        async with aiosqlite.connect(db_path) as db:
-            await db.execute("""
-                CREATE TABLE IF NOT EXISTS mistakes (
-                    mistake_id TEXT PRIMARY KEY,
-                    subject_code TEXT NOT NULL,
-                    page INTEGER NOT NULL,
-                    chapter TEXT NOT NULL,
-                    question_number INTEGER NOT NULL,
-                    question_text TEXT DEFAULT '',
-                    answer_text TEXT DEFAULT '',
-                    explanation TEXT DEFAULT '',
-                    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                )
-            """)
-            await db.commit()
+        from app.utils.db_migrations import run_migrations
+        await run_migrations(db_path)
+
         logger.info("SQLite 数据库初始化完成 path=%s elapsed=%.2fs", db_path, time.time() - t0)
     except Exception as e:
         logger.error("SQLite 初始化失败 error=%s", str(e), exc_info=True)
 
-    # 5. 检查 LLM 可用性
+    # 5. 检查 LLM 可用性（增强版自检）
+    llm_available = False
     try:
         from app.llm_factory import LLMFactory
         if settings.llm.provider == "ollama":
-            if LLMFactory.check_ollama_health():
-                logger.info("Ollama 服务检查通过")
+            health = LLMFactory.check_ollama_health()
+            if health["reachable"] and health["inference_ok"]:
+                llm_available = True
+                logger.info(
+                    "Ollama 自检通过 models=%s",
+                    health["models"],
+                )
+            elif health["reachable"] and not health["inference_ok"]:
+                logger.error(
+                    "⚠ Ollama HTTP 可达但推理失败!\n"
+                    "  错误: %s\n"
+                    "  修复建议: %s",
+                    health.get("error", "未知"),
+                    health.get("fix_hint", "请重启 Ollama"),
+                )
             else:
                 logger.warning(
-                    "Ollama 服务不可用 url=%s，RAG 问答功能将不可用。"
-                    "请确保 Ollama 已启动: ollama serve",
-                    settings.llm.ollama.base_url,
+                    "Ollama 服务不可用: %s\n  修复建议: %s",
+                    health.get("error", "未知"),
+                    health.get("fix_hint", "请启动 Ollama: ollama serve"),
                 )
         elif settings.llm.provider == "openai":
             if settings.llm.openai.api_key:
+                llm_available = True
                 logger.info("OpenAI API Key 已配置")
             else:
                 logger.warning("OpenAI API Key 未配置，RAG 问答功能将不可用")
     except Exception as e:
         logger.warning("LLM 可用性检查失败 error=%s", str(e))
+
+    app_state.llm_available = llm_available
 
     # 6. 初始化 Skills（不依赖 LLM 的部分）
     t0 = time.time()
@@ -333,5 +335,6 @@ async def health_check(request: Request):
             "embeddings": state.embeddings is not None,
             "knowledge_graph": state.graph_data is not None,
             "database": bool(state.db_path),
+            "llm_available": state.llm_available,
         },
     }

@@ -18,7 +18,7 @@ from fastapi import APIRouter, Request, Query
 from fastapi.responses import FileResponse
 
 from app.models.mistake import (
-    MistakeCreate, MistakeItem, MistakeListResponse,
+    MistakeCreate, MistakeUpdate, MistakeItem, MistakeListResponse,
     MistakeAddResponse, WordGenerateRequest, WordGenerateResponse,
 )
 from app.config import BACKEND_DIR
@@ -240,6 +240,68 @@ async def delete_mistake(mistake_id: str, request: Request):
             )
 
     return {"message": "删除成功", "mistake_id": mistake_id}
+
+
+@router.put("/{mistake_id}", response_model=MistakeItem)
+async def update_mistake(mistake_id: str, req: MistakeUpdate, request: Request):
+    """
+    更新错题内容。
+
+    只更新请求中非 None 的字段。
+    """
+    state: AppState = get_app_state(request)
+
+    # 构建动态 UPDATE 语句
+    fields = []
+    values = []
+
+    if req.question_text is not None:
+        fields.append("question_text = ?")
+        values.append(req.question_text)
+    if req.answer_text is not None:
+        fields.append("answer_text = ?")
+        values.append(req.answer_text)
+    if req.explanation is not None:
+        fields.append("explanation = ?")
+        values.append(req.explanation)
+
+    if not fields:
+        raise InputFormatError(message="至少需要提供一个要更新的字段")
+
+    # 添加 updated_at 时间戳
+    fields.append("updated_at = CURRENT_TIMESTAMP")
+    values.append(mistake_id)
+
+    sql = f"UPDATE mistakes SET {', '.join(fields)} WHERE mistake_id = ?"
+
+    logger.info("更新错题 mistake_id=%s fields=%s", mistake_id, [f.split(" =")[0] for f in fields[:-1]])
+
+    async with aiosqlite.connect(state.db_path) as db:
+        cursor = await db.execute(sql, values)
+        await db.commit()
+
+        if cursor.rowcount == 0:
+            raise QuestionNotFoundError(
+                message=f"错题不存在: {mistake_id}",
+                detail=f"mistake_id={mistake_id}",
+            )
+
+        # 返回更新后的完整记录
+        db.row_factory = aiosqlite.Row
+        async with db.execute("SELECT * FROM mistakes WHERE mistake_id = ?", (mistake_id,)) as cur:
+            row = await cur.fetchone()
+
+    return MistakeItem(
+        mistake_id=row["mistake_id"],
+        subject_code=row["subject_code"],
+        page=row["page"],
+        chapter=row["chapter"],
+        question_number=row["question_number"],
+        question_text=row["question_text"] or "",
+        answer_text=row["answer_text"] or "",
+        explanation=row["explanation"] or "",
+        added_at=str(row["added_at"]) if row["added_at"] else "",
+    )
 
 
 @router.post("/generate-word", response_model=WordGenerateResponse)

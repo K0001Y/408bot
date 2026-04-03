@@ -13,6 +13,13 @@ class MistakeCreate(BaseModel):
     subject_code: str = Field(..., description="科目代码: ds/os/co/cn")
 
 
+class MistakeUpdate(BaseModel):
+    """错题更新请求（所有字段均为可选，只更新传入的非 None 字段）"""
+    question_text: str | None = Field(None, description="题目文本")
+    answer_text: str | None = Field(None, description="答案文本")
+    explanation: str | None = Field(None, description="解析/备注")
+
+
 class MistakeItem(BaseModel):
     """单条错题"""
     mistake_id: str
