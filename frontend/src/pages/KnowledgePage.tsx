@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, Send, Loader2 } from "lucide-react";
+import { Search, Send, Loader2, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SubjectPicker } from "@/components/SubjectPicker";
 import { api, type SearchResult } from "@/lib/api";
@@ -16,6 +15,13 @@ interface Message {
   content: string;
   sources?: SearchResult[];
 }
+
+const EXAMPLE_QUESTIONS = [
+  "什么是哈夫曼树？",
+  "TCP 三次握手的过程",
+  "页面置换算法有哪些？",
+  "流水线的基本概念",
+];
 
 export function KnowledgePage() {
   const [subject, setSubject] = useState<string | null>(null);
@@ -35,33 +41,21 @@ export function KnowledgePage() {
   const handleSearch = async () => {
     if (!query.trim()) return;
     const result = await run(() =>
-      api.searchKnowledge({
-        query: query.trim(),
-        subject: subject ?? undefined,
-        top_k: 10,
-      })
+      api.searchKnowledge({ query: query.trim(), subject: subject ?? undefined, top_k: 10 })
     );
-    if (result) {
-      setSearchResults(result.results);
-    }
+    if (result) setSearchResults(result.results);
   };
 
   const handleAsk = async () => {
     if (!query.trim() || loading) return;
     const q = query.trim();
     setQuery("");
-
-    const userMsg: Message = {
-      id: Date.now().toString(),
-      role: "user",
-      content: q,
-    };
+    const userMsg: Message = { id: Date.now().toString(), role: "user", content: q };
     setMessages((prev) => [...prev, userMsg]);
 
     const result = await run(() =>
       api.askQuestion({ query: q, subject: subject ?? undefined })
     );
-
     const assistantMsg: Message = {
       id: (Date.now() + 1).toString(),
       role: "assistant",
@@ -78,58 +72,69 @@ export function KnowledgePage() {
   };
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full flex-col bg-background">
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-border px-6 py-4">
-        <div>
-          <h1 className="text-lg font-semibold text-foreground">知识库</h1>
-          <p className="text-xs text-muted-foreground">搜索教材知识点或向 AI 提问</p>
-        </div>
-        <div className="flex items-center gap-3">
-          <SubjectPicker value={subject} onChange={setSubject} />
-          <div className="flex rounded-lg border border-border">
+      <header className="flex flex-shrink-0 items-center justify-between border-b border-border bg-card/80 px-6 py-3">
+        <div className="flex items-center gap-4">
+          <div>
+            <h1 className="font-display text-base font-semibold text-foreground tracking-wider">知识库</h1>
+            <p className="font-mono-tech text-[9px] text-muted-foreground tracking-widest">KNOWLEDGE BASE</p>
+          </div>
+          {/* Mode toggle — no rounding */}
+          <div className="flex border border-border">
             <button
               onClick={() => setMode("chat")}
               className={cn(
-                "rounded-l-lg px-3 py-1.5 text-xs font-medium transition-smooth",
-                mode === "chat" ? "bg-accent text-accent-foreground" : "text-muted-foreground hover:text-foreground"
+                "flex items-center gap-1.5 px-3 py-1.5 font-mono-tech text-[10px] font-medium tracking-widest transition-smooth",
+                mode === "chat"
+                  ? "bg-accent text-accent-foreground border-r border-primary/30"
+                  : "text-muted-foreground hover:text-foreground border-r border-border"
               )}
             >
-              问答
+              <Terminal className="h-3 w-3" />
+              QA
             </button>
             <button
               onClick={() => setMode("search")}
               className={cn(
-                "rounded-r-lg px-3 py-1.5 text-xs font-medium transition-smooth",
-                mode === "search" ? "bg-accent text-accent-foreground" : "text-muted-foreground hover:text-foreground"
+                "flex items-center gap-1.5 px-3 py-1.5 font-mono-tech text-[10px] font-medium tracking-widest transition-smooth",
+                mode === "search"
+                  ? "bg-accent text-accent-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
-              检索
+              <Search className="h-3 w-3" />
+              SEARCH
             </button>
           </div>
         </div>
+        <SubjectPicker value={subject} onChange={setSubject} />
       </header>
 
       {/* Content */}
-      <div ref={scrollRef} className="flex-1 overflow-y-auto p-6">
+      <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 scanlines">
         {mode === "chat" ? (
-          <div className="mx-auto max-w-3xl space-y-4">
+          <div className="mx-auto max-w-2xl space-y-4">
             {messages.length === 0 && (
-              <div className="flex flex-col items-center justify-center py-20 text-center">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl gradient-primary shadow-glow">
-                  <Search className="h-7 w-7 text-primary-foreground" />
+              <div className="flex flex-col items-center justify-center py-16 text-center animate-fade-in-up">
+                {/* Terminal-style icon box */}
+                <div className="bracket-corners relative mb-5 flex h-16 w-16 items-center justify-center border border-primary/40 bg-card">
+                  <Terminal className="h-7 w-7 text-primary" />
+                  <div className="hr-amber absolute bottom-0 left-0 right-0" />
                 </div>
-                <h2 className="mb-2 text-xl font-semibold text-foreground">408 知识问答</h2>
-                <p className="max-w-md text-sm text-muted-foreground">
-                  基于数据结构、操作系统、计算机组成原理、计算机网络四本教材，
-                  为你提供精准的知识点解答
+                <h2 className="font-display mb-2 text-xl font-semibold text-foreground tracking-wider">
+                  408 KNOWLEDGE BASE
+                </h2>
+                <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+                  基于数据结构、操作系统、计算机组成原理、计算机网络四本教材，为你提供精准的知识点解答
                 </p>
+                {/* Example prompts — rectangular */}
                 <div className="mt-6 flex flex-wrap justify-center gap-2">
-                  {["什么是哈夫曼树？", "TCP 三次握手的过程", "页面置换算法有哪些？", "流水线的基本概念"].map((q) => (
+                  {EXAMPLE_QUESTIONS.map((q) => (
                     <button
                       key={q}
-                      onClick={() => { setQuery(q); }}
-                      className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground transition-smooth hover:border-primary/30 hover:text-foreground"
+                      onClick={() => setQuery(q)}
+                      className="border border-border bg-card px-3 py-1.5 font-mono-tech text-[10px] text-muted-foreground tracking-wide transition-smooth hover:border-primary/50 hover:bg-accent/30 hover:text-accent-foreground"
                     >
                       {q}
                     </button>
@@ -143,24 +148,35 @@ export function KnowledgePage() {
                 key={msg.id}
                 className={cn(
                   "animate-fade-in",
-                  msg.role === "user" ? "flex justify-end" : "flex justify-start"
+                  msg.role === "user" ? "flex justify-end" : "flex justify-start items-start gap-2"
                 )}
               >
+                {/* AI prefix label */}
+                {msg.role === "assistant" && (
+                  <div className="mt-1 shrink-0">
+                    <div className="flex h-6 w-6 items-center justify-center bg-primary shadow-glow">
+                      <span className="font-mono-tech text-[8px] font-bold text-primary-foreground">AI</span>
+                    </div>
+                  </div>
+                )}
+
                 <div
                   className={cn(
-                    "max-w-[85%] rounded-xl px-4 py-3 text-sm leading-relaxed",
+                    "max-w-[82%] px-4 py-3 text-sm leading-relaxed",
                     msg.role === "user"
-                      ? "gradient-primary text-primary-foreground"
-                      : "bg-secondary text-foreground"
+                      ? "gradient-primary text-primary-foreground shadow-glow"
+                      : "border border-border bg-card text-foreground border-l-2 border-l-primary/40"
                   )}
                 >
                   <div className="whitespace-pre-wrap">{msg.content}</div>
                   {msg.sources && msg.sources.length > 0 && (
-                    <div className="mt-3 border-t border-border/30 pt-2">
-                      <p className="mb-1 text-[10px] uppercase tracking-wider opacity-60">参考来源</p>
+                    <div className="mt-3 border-t border-white/10 pt-2">
+                      <p className="mb-1.5 font-mono-tech text-[9px] uppercase tracking-widest opacity-50">
+                        REFERENCES
+                      </p>
                       <div className="flex flex-wrap gap-1">
                         {msg.sources.slice(0, 5).map((s, i) => (
-                          <Badge key={i} variant="secondary" className="text-[10px]">
+                          <Badge key={i} variant="secondary">
                             {s.subsection} {s.subsection_title}
                           </Badge>
                         ))}
@@ -168,57 +184,82 @@ export function KnowledgePage() {
                     </div>
                   )}
                 </div>
+
+                {/* USER label */}
+                {msg.role === "user" && (
+                  <div className="mt-1 shrink-0">
+                    <div className="flex h-6 w-6 items-center justify-center bg-secondary border border-border">
+                      <span className="font-mono-tech text-[8px] font-bold text-muted-foreground">U</span>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
 
             {loading && (
-              <div className="flex justify-start animate-fade-in">
-                <div className="flex items-center gap-2 rounded-xl bg-secondary px-4 py-3 text-sm text-muted-foreground">
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                  正在思考...
+              <div className="flex animate-fade-in items-start gap-2">
+                <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center bg-primary shadow-glow">
+                  <span className="font-mono-tech text-[8px] font-bold text-primary-foreground">AI</span>
+                </div>
+                <div className="border border-border border-l-2 border-l-primary/40 bg-card px-4 py-3 text-sm text-muted-foreground">
+                  <span className="font-mono-tech text-xs">
+                    PROCESSING
+                    <span className="animate-typing inline-block ml-0.5" style={{ animationDelay: "0ms" }}>.</span>
+                    <span className="animate-typing inline-block" style={{ animationDelay: "200ms" }}>.</span>
+                    <span className="animate-typing inline-block" style={{ animationDelay: "400ms" }}>.</span>
+                  </span>
                 </div>
               </div>
             )}
           </div>
         ) : (
-          <div className="mx-auto max-w-3xl space-y-3">
+          <div className="mx-auto max-w-2xl space-y-2">
             {searchResults.length === 0 ? (
-              <p className="py-20 text-center text-sm text-muted-foreground">输入关键词搜索教材知识点</p>
+              <div className="flex flex-col items-center justify-center py-20 text-center animate-fade-in-up">
+                <Search className="mb-3 h-10 w-10 text-muted-foreground/20" />
+                <p className="font-mono-tech text-sm text-muted-foreground tracking-widest">INPUT SEARCH QUERY</p>
+              </div>
             ) : (
-              searchResults.map((r) => (
-                <Card key={r.chunk_id} className="transition-smooth hover:border-primary/30">
-                  <CardContent className="p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <Badge variant="default">{getSubjectName(r.subject_code ?? "")}</Badge>
-                      <Badge variant="secondary">{r.subsection}</Badge>
-                      <span className="text-xs text-muted-foreground">{r.subsection_title}</span>
-                      {r.score != null && (
-                        <span className="ml-auto text-[10px] text-muted-foreground">
-                          {(r.score * 100).toFixed(0)}%
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm leading-relaxed text-foreground/80 line-clamp-3">{r.preview}</p>
-                  </CardContent>
-                </Card>
+              searchResults.map((r, idx) => (
+                <div
+                  key={r.chunk_id}
+                  className="animate-fade-in border border-border bg-card/80 p-4 transition-smooth hover:border-primary/40 hover:shadow-glow bracket-corners"
+                  style={{ animationDelay: `${idx * 40}ms` }}
+                >
+                  <div className="mb-2 flex items-center gap-2 flex-wrap">
+                    <Badge variant="default">{getSubjectName(r.subject_code ?? "")}</Badge>
+                    <Badge variant="secondary">{r.subsection}</Badge>
+                    <span className="font-mono-tech text-[10px] text-muted-foreground">{r.subsection_title}</span>
+                    {r.score != null && (
+                      <span className="ml-auto font-mono-tech text-[10px] text-primary/80">
+                        {(r.score * 100).toFixed(0)}%
+                      </span>
+                    )}
+                  </div>
+                  <p className="line-clamp-3 text-sm leading-relaxed text-foreground/75">{r.preview}</p>
+                </div>
               ))
             )}
           </div>
         )}
       </div>
 
-      {/* Input */}
-      <div className="border-t border-border p-4">
-        <form onSubmit={handleSubmit} className="mx-auto flex max-w-3xl items-center gap-2">
+      {/* Input bar */}
+      <div className="flex-shrink-0 border-t border-border bg-card/50 px-6 py-4">
+        <form onSubmit={handleSubmit} className="mx-auto flex max-w-2xl items-center gap-2">
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={mode === "chat" ? "输入你的问题..." : "输入关键词搜索..."}
-            className="flex-1"
+            placeholder={mode === "chat" ? "// 输入你的问题..." : "// SEARCH QUERY..."}
+            className="flex-1 font-mono-tech text-sm"
             disabled={loading}
           />
-          <Button type="submit" size="icon" disabled={loading || !query.trim()}>
-            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : mode === "chat" ? <Send className="h-4 w-4" /> : <Search className="h-4 w-4" />}
+          <Button type="submit" size="icon" disabled={loading || !query.trim()} className="shrink-0">
+            {loading
+              ? <Loader2 className="h-4 w-4 animate-spin" />
+              : mode === "chat"
+              ? <Send className="h-4 w-4" />
+              : <Search className="h-4 w-4" />}
           </Button>
         </form>
       </div>

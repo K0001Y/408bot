@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="flex h-screen overflow-hidden bg-background">
       <Sidebar active={activePage} onChange={setActivePage} />
-      <main className="ml-[68px] flex-1 overflow-hidden">
+      <main className="ml-[200px] flex-1 overflow-hidden">
         <ActiveComponent />
       </main>
     </div>

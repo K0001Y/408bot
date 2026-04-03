@@ -9,9 +9,9 @@ import { useLoading } from "@/hooks/useLoading";
 import cytoscape, { type Core } from "cytoscape";
 
 const NODE_COLORS: Record<string, string> = {
-  chapter: "#f59e0b",
-  concept: "#6366f1",
-  algorithm: "#10b981",
+  chapter: "#f59e0b",   // amber — 章节
+  concept: "#f97316",   // orange — 概念（无蓝/紫）
+  algorithm: "#10b981", // emerald — 算法
 };
 
 const EDGE_COLORS: Record<string, string> = {
@@ -68,7 +68,7 @@ export function GraphPage() {
             "text-valign": "bottom",
             "text-margin-y": 6,
             "background-color": (ele: cytoscape.NodeSingular) =>
-              NODE_COLORS[ele.data("type")] ?? "#6366f1",
+              NODE_COLORS[ele.data("type")] ?? "#f97316",
             width: (ele: cytoscape.NodeSingular) => (ele.data("type") === "chapter" ? 28 : 16),
             height: (ele: cytoscape.NodeSingular) => (ele.data("type") === "chapter" ? 28 : 16),
             "border-width": 2,
@@ -173,11 +173,11 @@ export function GraphPage() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-border px-6 py-4">
+      <header className="flex items-center justify-between border-b border-border bg-card/50 px-6 py-3">
         <div>
-          <h1 className="text-lg font-semibold text-foreground">知识图谱</h1>
-          <p className="text-xs text-muted-foreground">
-            {graphData ? `${graphData.node_count} 个知识点 / ${graphData.edge_count} 条关联` : "加载中..."}
+          <h1 className="font-display text-base font-semibold text-foreground">知识图谱</h1>
+          <p className="font-mono-tech text-[10px] text-muted-foreground">
+            {graphData ? `${graphData.node_count} nodes · ${graphData.edge_count} edges` : "Loading..."}
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -218,11 +218,11 @@ export function GraphPage() {
         </div>
 
         {/* Legend */}
-        <div className="absolute left-4 top-4 flex gap-3 rounded-lg border border-border bg-card/90 px-3 py-2 backdrop-blur-sm">
+        <div className="absolute left-4 top-4 flex items-center gap-3 border border-border bg-card/90 px-3 py-2 backdrop-blur-md">
           {Object.entries(NODE_COLORS).map(([type, color]) => (
             <div key={type} className="flex items-center gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: color }} />
-              <span className="text-[10px] text-muted-foreground">
+              <span className="h-2 w-2 shadow-sm" style={{ backgroundColor: color, boxShadow: `0 0 6px ${color}88` }} />
+              <span className="font-mono-tech text-[10px] text-muted-foreground">
                 {type === "chapter" ? "章节" : type === "concept" ? "概念" : "算法"}
               </span>
             </div>
@@ -231,17 +231,17 @@ export function GraphPage() {
 
         {/* Search results dropdown */}
         {searchResults.length > 0 && (
-          <div className="absolute right-6 top-2 z-10 w-60 rounded-lg border border-border bg-card shadow-lg">
+          <div className="absolute right-6 top-2 z-10 w-64 border border-border bg-card/95 shadow-lg backdrop-blur-md animate-scale-in">
             <div className="max-h-60 overflow-y-auto p-1">
               {searchResults.map((n) => (
                 <button
                   key={n.id}
                   onClick={() => focusNode(n.id)}
-                  className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-xs transition-smooth hover:bg-secondary"
+                  className="flex w-full items-center gap-2.5 px-3 py-2 text-left transition-smooth hover:bg-secondary"
                 >
-                  <span className="h-2 w-2 rounded-full" style={{ backgroundColor: NODE_COLORS[n.type] ?? "#6366f1" }} />
-                  <span className="flex-1 truncate text-foreground">{n.label}</span>
-                  <Badge variant="secondary" className="text-[10px]">{n.type}</Badge>
+                  <span className="h-2 w-2 shrink-0" style={{ backgroundColor: NODE_COLORS[n.type] ?? "#f97316", boxShadow: `0 0 6px ${NODE_COLORS[n.type] ?? "#f97316"}88` }} />
+                  <span className="flex-1 truncate text-xs text-foreground">{n.label}</span>
+                  <span className="font-mono-tech text-[9px] text-muted-foreground uppercase">{n.type}</span>
                 </button>
               ))}
             </div>
@@ -250,14 +250,27 @@ export function GraphPage() {
 
         {/* Selected node info */}
         {selectedNode && (
-          <div className="absolute bottom-4 left-4 w-64 animate-slide-in-left rounded-lg border border-border bg-card p-4 shadow-lg">
-            <div className="mb-2 flex items-center gap-2">
-              <span className="h-3 w-3 rounded-full" style={{ backgroundColor: NODE_COLORS[selectedNode.type] ?? "#6366f1" }} />
-              <span className="text-sm font-medium text-foreground">{selectedNode.label}</span>
+          <div className="absolute bottom-4 left-4 w-64 animate-slide-in-left border border-border bg-card/95 shadow-lg backdrop-blur-md overflow-hidden">
+            <div className="flex items-center gap-2 border-b border-border px-4 py-2.5">
+              <span
+                className="h-2.5 w-2.5"
+                style={{ backgroundColor: NODE_COLORS[selectedNode.type] ?? "#f97316", boxShadow: `0 0 8px ${NODE_COLORS[selectedNode.type] ?? "#f97316"}99` }}
+              />
+              <span className="flex-1 truncate text-sm font-semibold text-foreground">{selectedNode.label}</span>
             </div>
-            <div className="space-y-1 text-xs text-muted-foreground">
-              <p>类型: {selectedNode.type === "chapter" ? "章节" : selectedNode.type === "concept" ? "概念" : "算法"}</p>
-              {selectedNode.subject_code && <p>科目: {selectedNode.subject_code.toUpperCase()}</p>}
+            <div className="space-y-1.5 px-4 py-3">
+              <div className="flex items-center justify-between">
+                <span className="font-mono-tech text-[10px] text-muted-foreground uppercase tracking-wider">TYPE</span>
+                <span className="font-mono-tech text-[10px] text-foreground/80">
+                  {selectedNode.type === "chapter" ? "章节" : selectedNode.type === "concept" ? "概念" : "算法"}
+                </span>
+              </div>
+              {selectedNode.subject_code && (
+                <div className="flex items-center justify-between">
+                  <span className="font-mono-tech text-[10px] text-muted-foreground uppercase tracking-wider">SUBJECT</span>
+                  <span className="font-mono-tech text-[10px] text-foreground/80">{selectedNode.subject_code.toUpperCase()}</span>
+                </div>
+              )}
             </div>
           </div>
         )}

@@ -9,18 +9,18 @@ interface SubjectPickerProps {
 
 export function SubjectPicker({ value, onChange, showAll = true }: SubjectPickerProps) {
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1">
       {showAll && (
         <button
           onClick={() => onChange(null)}
           className={cn(
-            "rounded-md px-2.5 py-1 text-xs font-medium transition-smooth",
+            "rounded-none px-2.5 py-1 font-mono-tech text-[10px] font-medium tracking-widest transition-smooth",
             value === null
-              ? "bg-accent text-accent-foreground"
-              : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+              ? "bg-accent text-accent-foreground border border-primary/30 shadow-teal-sm"
+              : "text-muted-foreground hover:bg-secondary hover:text-foreground border border-transparent"
           )}
         >
-          全部
+          ALL
         </button>
       )}
       {SUBJECTS.map((s) => (
@@ -28,10 +28,10 @@ export function SubjectPicker({ value, onChange, showAll = true }: SubjectPicker
           key={s.code}
           onClick={() => onChange(s.code)}
           className={cn(
-            "rounded-md px-2.5 py-1 text-xs font-medium transition-smooth",
+            "rounded-none px-2.5 py-1 font-mono-tech text-[10px] font-medium tracking-widest transition-smooth",
             value === s.code
-              ? "bg-accent text-accent-foreground"
-              : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+              ? "bg-accent text-accent-foreground border border-primary/30 shadow-teal-sm"
+              : "text-muted-foreground hover:bg-secondary hover:text-foreground border border-transparent"
           )}
         >
           {s.short}

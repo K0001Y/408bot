@@ -4,60 +4,61 @@
 
 @layer base {
   :root {
-    /* 408 Scholar Theme — Deep Indigo + Warm Amber */
-    --background: 225 25% 6%;
-    --foreground: 220 20% 92%;
+    /* CYBERLIFE OS — Amber on Black · Detroit-inspired */
+    --background: 0 0% 5%;
+    --foreground: 30 8% 88%;
 
-    --card: 225 22% 9%;
-    --card-foreground: 220 20% 92%;
+    --card: 0 0% 8%;
+    --card-foreground: 30 8% 88%;
 
-    --popover: 225 22% 9%;
-    --popover-foreground: 220 20% 92%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 30 8% 88%;
 
-    /* Indigo primary */
-    --primary: 230 70% 60%;
-    --primary-foreground: 220 30% 98%;
+    /* Amber primary — android indicator light */
+    --primary: 38 92% 52%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 225 18% 14%;
-    --secondary-foreground: 220 15% 75%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 60%;
 
-    --muted: 225 15% 12%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 38%;
 
-    /* Indigo accent */
-    --accent: 230 55% 20%;
-    --accent-foreground: 230 80% 75%;
+    /* Dark amber for active states */
+    --accent: 38 40% 12%;
+    --accent-foreground: 38 75% 68%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 4 80% 52%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 225 15% 15%;
-    --input: 225 15% 18%;
-    --ring: 230 70% 60%;
+    --border: 0 0% 16%;
+    --input: 0 0% 13%;
+    --ring: 38 92% 52%;
 
-    --radius: 0.625rem;
+    --radius: 0.125rem; /* 2px — near-zero rounding */
 
     /* Extended tokens */
-    --surface: 225 20% 11%;
-    --amber: 38 92% 50%;
-    --amber-foreground: 38 10% 10%;
+    --surface: 0 0% 10%;
+    --amber: 38 92% 52%;
+    --amber-foreground: 0 0% 5%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(230 70% 60%), hsl(250 65% 55%));
-    --gradient-surface: linear-gradient(180deg, hsl(225 22% 9%), hsl(225 25% 7%));
-    --gradient-amber: linear-gradient(135deg, hsl(38 92% 50%), hsl(28 90% 55%));
-    --gradient-sidebar: linear-gradient(180deg, hsl(225 25% 8%), hsl(225 25% 6%));
+    --gradient-primary: linear-gradient(135deg, hsl(38 92% 52%), hsl(28 85% 44%));
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 6%));
+    --gradient-amber: linear-gradient(135deg, hsl(38 92% 52%), hsl(28 85% 44%));
+    --gradient-sidebar: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 5%));
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(225 25% 3% / 0.3);
-    --shadow-md: 0 4px 12px -2px hsl(225 25% 3% / 0.4);
-    --shadow-lg: 0 10px 30px -8px hsl(225 25% 3% / 0.5);
-    --shadow-glow: 0 0 20px hsl(230 70% 60% / 0.15);
-    --shadow-amber-glow: 0 0 20px hsl(38 92% 50% / 0.15);
+    /* Shadows — sharp, minimal */
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.7);
+    --shadow-md: 0 4px 8px -2px hsl(0 0% 0% / 0.7);
+    --shadow-lg: 0 8px 20px -4px hsl(0 0% 0% / 0.8);
+    --shadow-glow: 0 0 14px hsl(38 92% 52% / 0.3);
+    --shadow-amber-glow: 0 0 14px hsl(38 92% 52% / 0.3);
+    --shadow-teal-sm: 0 0 8px hsl(38 92% 52% / 0.2);
 
-    /* Transitions */
-    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transitions — snappier */
+    --transition-fast: 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 180ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -68,59 +69,47 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'Exo 2', 'Arial', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Custom scrollbar for dark theme */
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
+  /* Minimal scrollbar */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--muted));
-    border-radius: 3px;
+    background: hsl(var(--border));
+    border-radius: 0;
   }
-
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground));
+    background: hsl(var(--muted-foreground) / 0.5);
   }
 }
 
 @layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
+  /* Font families */
+  .font-display {
+    font-family: 'Exo 2', 'Arial', sans-serif;
   }
 
-  .gradient-surface {
-    background: var(--gradient-surface);
+  .font-mono-tech {
+    font-family: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
   }
 
-  .gradient-amber {
-    background: var(--gradient-amber);
-  }
+  /* Gradients */
+  .gradient-primary { background: var(--gradient-primary); }
+  .gradient-surface { background: var(--gradient-surface); }
+  .gradient-amber   { background: var(--gradient-amber); }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
+  /* Shadows */
+  .shadow-glow       { box-shadow: var(--shadow-glow); }
+  .shadow-amber-glow { box-shadow: var(--shadow-amber-glow); }
+  .shadow-teal-sm    { box-shadow: var(--shadow-teal-sm); }
 
-  .shadow-amber-glow {
-    box-shadow: var(--shadow-amber-glow);
-  }
+  /* Transitions */
+  .transition-fast   { transition: var(--transition-fast); }
+  .transition-smooth { transition: var(--transition-smooth); }
 
-  .transition-fast {
-    transition: var(--transition-fast);
-  }
-
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-
-  /* Text gradient utility */
+  /* Text gradients */
   .text-gradient-primary {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -135,10 +124,92 @@
     background-clip: text;
   }
 
-  /* Glass morphism */
+  /* Glass — more opaque for Detroit feel */
   .glass {
-    background: hsl(var(--card) / 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: hsl(var(--card) / 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* Scan lines — Detroit HUD overlay */
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      hsl(0 0% 0% / 0.07) 3px,
+      hsl(0 0% 0% / 0.07) 4px
+    );
+  }
+
+  /* Chamfered corners — Detroit-style angular panels */
+  .clip-cut-sm {
+    clip-path: polygon(
+      0 5px, 5px 0, calc(100% - 5px) 0, 100% 5px,
+      100% calc(100% - 5px), calc(100% - 5px) 100%,
+      5px 100%, 0 calc(100% - 5px)
+    );
+  }
+
+  .clip-cut {
+    clip-path: polygon(
+      0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px,
+      100% calc(100% - 10px), calc(100% - 10px) 100%,
+      10px 100%, 0 calc(100% - 10px)
+    );
+  }
+
+  /* Corner bracket decoration — panel framing effect */
+  .bracket-corners {
+    position: relative;
+  }
+
+  .bracket-corners::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid hsl(var(--primary) / 0.7);
+    border-left: 1px solid hsl(var(--primary) / 0.7);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .bracket-corners::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 1px solid hsl(var(--primary) / 0.7);
+    border-right: 1px solid hsl(var(--primary) / 0.7);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Amber teal divider alias */
+  .divider-teal {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0.8),
+      hsl(var(--primary) / 0.15),
+      transparent
+    );
+  }
+
+  /* Dot grid */
+  .bg-grid-dots {
+    background-image: radial-gradient(circle, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Amber horizontal rule */
+  .hr-amber {
+    height: 1px;
+    background: linear-gradient(90deg, hsl(var(--primary)), transparent);
   }
 }
