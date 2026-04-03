@@ -15,11 +15,100 @@
 ### 1.3 技术栈
 - **前端**：React + TypeScript + Tailwind CSS
 - **后端**：Python FastAPI
-- **Agent 框架**：LangChain（用于知识问答 RAG 流程）
+- **Agent 框架**：LangChain（用于知识问答 RAG 流程）+ Agentic RAG 扩展
 - **向量数据库**：ChromaDB
-- **LLM**：OpenAI API / Claude API
+- **LLM**：OpenAI API / Claude API / **Ollama 本地模型**
 - **知识图谱**：D3.js / Cytoscape.js
 - **文档生成**：python-docx
+
+### 1.4 重要设计原则
+
+#### LLM 接口双模式支持
+
+**所有 AI 接口必须同时支持 API 调用和本地 Ollama 模型调用**。
+
+**实现方式**：
+```python
+from langchain.llms import Ollama
+from langchain.chat_models import ChatOpenAI
+
+class LLMFactory:
+    """
+    LLM 工厂类，统一创建 API 或本地模型实例
+    """
+    
+    @staticmethod
+    def create_llm(provider: str = "openai", **kwargs):
+        """
+        创建 LLM 实例
+        
+        Args:
+            provider: "openai" | "claude" | "ollama"
+            **kwargs: 模型特定参数
+        
+        Returns:
+            LLM 实例
+        """
+        if provider == "openai":
+            return ChatOpenAI(
+                model=kwargs.get("model", "gpt-4"),
+                temperature=kwargs.get("temperature", 0),
+                api_key=kwargs.get("api_key")
+            )
+        
+        elif provider == "claude":
+            from langchain.chat_models import ChatAnthropic
+            return ChatAnthropic(
+                model=kwargs.get("model", "claude-3-opus-20240229"),
+                temperature=kwargs.get("temperature", 0),
+                api_key=kwargs.get("api_key")
+            )
+        
+        elif provider == "ollama":
+            return Ollama(
+                model=kwargs.get("model", "qwen2.5:14b"),
+                base_url=kwargs.get("base_url", "http://localhost:11434"),
+                temperature=kwargs.get("temperature", 0)
+            )
+        
+        else:
+            raise ValueError(f"Unknown provider: {provider}")
+
+# 使用示例
+llm = LLMFactory.create_llm(
+    provider="ollama",  # 或 "openai" / "claude"
+    model="qwen2.5:14b"
+)
+```
+
+**配置方式**：
+```yaml
+# config.yaml
+llm:
+  provider: "ollama"  # 可选: openai, claude, ollama
+  
+  # OpenAI 配置
+  openai:
+    model: "gpt-4"
+    api_key: ${OPENAI_API_KEY}
+  
+  # Claude 配置
+  claude:
+    model: "claude-3-opus-20240229"
+    api_key: ${ANTHROPIC_API_KEY}
+  
+  # Ollama 配置
+  ollama:
+    model: "qwen2.5:14b"  # 或 llama3.1:8b, deepseek-coder:6.7b 等
+    base_url: "http://localhost:11434"
+```
+
+**推荐本地模型**：
+| 模型 | 适用场景 | 显存需求 |
+|------|---------|---------|
+| qwen2.5:14b | 中文问答、知识检索 | ~10GB |
+| llama3.1:8b | 通用问答 | ~6GB |
+| deepseek-coder:6.7b | 代码相关 | ~5GB |
 
 ### 1.4 Skills 架构
 
@@ -558,16 +647,27 @@ def search_knowledge(query, subject=None, chapter=None, content_type=None, top_k
     return results[:top_k]
 ```
 
-### 5.3 回答生成（使用 LangChain）
+### 5.3 回答生成（使用 LangChain + Agentic RAG）
 
-**技术选型**：使用 **LangChain** 构建 RAG Chain
+**技术选型**：使用 **LangChain** 构建基础 RAG Chain，**增加 Agentic RAG 扩展能力**
+
+**架构设计**：
+```
+基础 RAG（当前）：
+用户查询 → 检索 → 生成回答
+
+Agentic RAG（扩展）：
+用户查询 → 查询分析 → [检索 → 评估 → 重写查询] → 整合 → 生成回答
+                     ↑_____________↓（可循环）
+```
 
 **选型理由**：
-- 知识问答是线性流程（检索 → 组装 Prompt → 生成），无需复杂状态管理
-- LangChain 生态成熟，与 ChromaDB、OpenAI 集成完善
-- 代码简洁，易于维护和调试
+- 保持 LangChain 架构，代码简洁易维护
+- 渐进式增加 Agentic 能力，避免过度设计
+- 支持动态检索策略，提升复杂问题回答质量
 
-**LangChain 实现**：
+#### 基础 RAG 实现（标准问答）
+
 ```python
 from langchain import OpenAI
 from langchain.embeddings import OpenAIEmbeddings
@@ -579,16 +679,23 @@ class AnswerGenerationSkill:
     """
     Skill: 基于检索结果生成回答
     使用 LangChain RetrievalQA Chain
+    支持 API 和 Ollama 本地模型
     """
     
-    def __init__(self):
-        # 初始化 Embedding
+    def __init__(self, llm_provider: str = "openai"):
+        # 初始化 Embedding（使用本地模型或 API）
         self.embeddings = OpenAIEmbeddings()
         
         # 加载向量数据库
         self.vectordb = Chroma(
             persist_directory="./data/vector_db",
             embedding_function=self.embeddings
+        )
+        
+        # 创建 LLM（支持 API 或 Ollama）
+        self.llm = LLMFactory.create_llm(
+            provider=llm_provider,
+            temperature=0
         )
         
         # 自定义 Prompt 模板
@@ -614,10 +721,10 @@ class AnswerGenerationSkill:
         
         # 构建 LangChain RAG Chain
         self.qa_chain = RetrievalQA.from_chain_type(
-            llm=OpenAI(temperature=0, model_name="gpt-4"),
-            chain_type="stuff",  # 简单拼接上下文
+            llm=self.llm,
+            chain_type="stuff",
             retriever=self.vectordb.as_retriever(
-                search_kwargs={"k": 10}  # 检索 Top-10
+                search_kwargs={"k": 10}
             ),
             return_source_documents=True,
             chain_type_kwargs={"prompt": self.prompt_template}
@@ -628,7 +735,7 @@ class AnswerGenerationSkill:
         执行回答生成
         
         Args:
-            params: {"query": "用户问题"}
+            params: {"query": "用户问题", "llm_provider": "openai|ollama"}
         
         Returns:
             {"answer": "回答", "sources": [...]}
@@ -649,6 +756,253 @@ class AnswerGenerationSkill:
                 for doc in result["source_documents"]
             ]
         }
+```
+
+#### Agentic RAG 扩展实现（复杂问答）
+
+```python
+from langchain.agents import Tool, AgentExecutor, create_react_agent
+from langchain.prompts import PromptTemplate
+
+class AgenticRAGSkill:
+    """
+    Skill: Agentic RAG 复杂问答
+    支持动态检索、查询重写、多步推理
+    支持 API 和 Ollama 本地模型
+    """
+    
+    def __init__(self, llm_provider: str = "openai"):
+        self.llm = LLMFactory.create_llm(
+            provider=llm_provider,
+            temperature=0.3  # 稍高温度支持创造性推理
+        )
+        
+        # 初始化工具
+        self.tools = self._create_tools()
+        
+        # 创建 Agent
+        self.agent = create_react_agent(
+            llm=self.llm,
+            tools=self.tools,
+            prompt=self._create_agent_prompt()
+        )
+        
+        self.agent_executor = AgentExecutor(
+            agent=self.agent,
+            tools=self.tools,
+            verbose=True,
+            max_iterations=5  # 防止无限循环
+        )
+    
+    def _create_tools(self) -> list:
+        """创建 Agent 工具"""
+        return [
+            Tool(
+                name="KnowledgeRetrieval",
+                func=self._retrieve_knowledge,
+                description="""
+                从教材中检索相关知识。
+                输入：具体的关键词或问题
+                输出：相关的教材内容列表
+                使用场景：需要查找特定知识点时
+                """
+            ),
+            Tool(
+                name="KnowledgeGraph",
+                func=self._query_graph,
+                description="""
+                查询知识图谱，获取概念之间的关联关系。
+                输入：概念名称
+                输出：关联的概念列表
+                使用场景：需要了解概念之间的关系时
+                """
+            ),
+            Tool(
+                name="EvaluateRetrieval",
+                func=self._evaluate_retrieval,
+                description="""
+                评估检索结果是否充分回答问题。
+                输入：检索结果和用户问题
+                输出：sufficient 或 insufficient
+                使用场景：判断是否需要重新检索
+                """
+            ),
+            Tool(
+                name="RewriteQuery",
+                func=self._rewrite_query,
+                description="""
+                重写查询以获取更多信息。
+                输入：原始查询和当前检索结果
+                输出：重写后的查询
+                使用场景：当前检索结果不足时
+                """
+            )
+        ]
+    
+    def _create_agent_prompt(self) -> PromptTemplate:
+        """创建 Agent Prompt"""
+        return PromptTemplate.from_template("""
+你是 408 考研辅导助手，使用工具帮助用户回答复杂的考研问题。
+
+可用工具：
+{tools}
+
+工具名称: {tool_names}
+
+请按照以下步骤思考：
+
+1. **分析用户问题**
+   - 确定问题涉及哪些知识点
+   - 判断是否需要跨章节整合信息
+   - 判断是否需要概念关系分析
+
+2. **检索相关知识**
+   - 使用 KnowledgeRetrieval 检索相关内容
+   - 如涉及概念关系，使用 KnowledgeGraph 查询关联
+
+3. **评估检索结果**
+   - 使用 EvaluateRetrieval 评估结果是否充分
+   - 如不充分，使用 RewriteQuery 重写查询并重新检索
+   - 最多重试 3 次
+
+4. **整合并生成回答**
+   - 整合所有检索到的信息
+   - 基于教材内容生成完整回答
+   - 如涉及多个知识点，分点说明
+
+重要原则：
+- 只基于检索到的教材内容回答
+- 如果教材内容不足以回答问题，明确说明
+- 如涉及代码，保留原格式
+
+用户问题: {input}
+
+{agent_scratchpad}
+""")
+    
+    def _retrieve_knowledge(self, query: str) -> str:
+        """检索知识工具"""
+        skill = KnowledgeRetrievalSkill()
+        results = skill.execute({"query": query, "top_k": 5})
+        return json.dumps(results, ensure_ascii=False)
+    
+    def _query_graph(self, concept: str) -> str:
+        """查询知识图谱工具"""
+        skill = KnowledgeGraphSkill()
+        result = skill.execute({
+            "action": "node_subgraph",
+            "node_id": concept,
+            "depth": 2
+        })
+        return json.dumps(result, ensure_ascii=False)
+    
+    def _evaluate_retrieval(self, params: str) -> str:
+        """评估检索结果工具"""
+        # params: JSON 字符串 {"question": "...", "retrieved": "..."}
+        data = json.loads(params)
+        question = data.get("question")
+        retrieved = data.get("retrieved")
+        
+        # 使用 LLM 评估
+        eval_prompt = f"""
+        用户问题：{question}
+        检索到的内容：{retrieved}
+        
+        这些检索结果是否足以完整回答用户问题？
+        只回答 sufficient 或 insufficient。
+        """
+        
+        result = self.llm.predict(eval_prompt)
+        return result.strip().lower()
+    
+    def _rewrite_query(self, params: str) -> str:
+        """重写查询工具"""
+        data = json.loads(params)
+        original_query = data.get("original_query")
+        current_results = data.get("current_results")
+        
+        rewrite_prompt = f"""
+        原问题：{original_query}
+        当前检索结果：{current_results}
+        
+        当前检索结果不足以回答原问题。
+        请重写查询，使其更具体或补充遗漏的关键词，以获取更多信息。
+        只输出重写后的查询，不要解释。
+        """
+        
+        new_query = self.llm.predict(rewrite_prompt)
+        return new_query.strip()
+    
+    def execute(self, params: dict) -> dict:
+        """
+        执行 Agentic RAG
+        
+        Args:
+            params: {"query": "用户问题", "llm_provider": "openai|ollama"}
+        
+        Returns:
+            {"answer": "回答", "intermediate_steps": [...]}
+        """
+        query = params.get("query")
+        
+        # 执行 Agent
+        result = self.agent_executor.invoke({"input": query})
+        
+        return {
+            "answer": result["output"],
+            "intermediate_steps": result.get("intermediate_steps", [])
+        }
+```
+
+#### 使用场景对比
+
+| 场景 | 使用技能 | 说明 |
+|------|---------|------|
+| "什么是虚拟内存？" | AnswerGenerationSkill | 标准 RAG，单次检索即可 |
+| "比较虚拟内存和物理内存的优缺点" | AnswerGenerationSkill | 标准 RAG，检索两个概念对比 |
+| "总结所有涉及 LRU 算法的地方" | AgenticRAGSkill | 需要多次检索跨章节内容 |
+| "分析页面置换算法的选择策略" | AgenticRAGSkill | 需要推理和整合多个算法 |
+
+#### 自动选择策略
+
+```python
+class SmartAnswerSkill:
+    """
+    智能选择使用标准 RAG 还是 Agentic RAG
+    """
+    
+    def __init__(self):
+        self.basic_skill = AnswerGenerationSkill()
+        self.agentic_skill = AgenticRAGSkill()
+    
+    def execute(self, params: dict) -> dict:
+        query = params.get("query")
+        
+        # 分析查询复杂度
+        complexity = self._analyze_complexity(query)
+        
+        if complexity == "simple":
+            # 简单问题使用标准 RAG
+            return self.basic_skill.execute(params)
+        else:
+            # 复杂问题使用 Agentic RAG
+            return self.agentic_skill.execute(params)
+    
+    def _analyze_complexity(self, query: str) -> str:
+        """分析查询复杂度"""
+        # 复杂问题特征
+        complex_indicators = [
+            "比较", "对比", "区别", "差异",
+            "总结", "归纳", "所有",
+            "分析", "为什么", "如何",
+            "关系", "联系", "影响"
+        ]
+        
+        for indicator in complex_indicators:
+            if indicator in query:
+                return "complex"
+        
+        return "simple"
 ```
 
 **Prompt 模板**：
@@ -855,6 +1209,8 @@ backend/
 │   ├── __init__.py
 │   ├── main.py              # FastAPI 入口
 │   ├── config.py            # 配置
+│   ├── agent.py             # Agent 主类
+│   ├── llm_factory.py       # LLM 工厂（支持 API + Ollama）
 │   ├── api/
 │   │   ├── __init__.py
 │   │   ├── knowledge.py     # 知识库接口
@@ -862,12 +1218,17 @@ backend/
 │   │   ├── practice.py      # 练习室接口
 │   │   ├── exam.py          # 真题坊接口
 │   │   └── mistakes.py      # 错题本接口
-│   ├── services/
+│   ├── skills/              # Skills 目录
 │   │   ├── __init__.py
-│   │   ├── rag_service.py   # RAG 服务
-│   │   ├── graph_service.py # 知识图谱服务
-│   │   ├── ocr_service.py   # OCR 服务
-│   │   └── docx_service.py  # Word 生成服务
+│   │   ├── base_skill.py    # Skill 基类
+│   │   ├── knowledge_retrieval_skill.py
+│   │   ├── knowledge_graph_skill.py
+│   │   ├── answer_generation_skill.py   # 标准 RAG
+│   │   ├── agentic_rag_skill.py         # Agentic RAG
+│   │   ├── question_location_skill.py
+│   │   ├── docx_generation_skill.py
+│   │   ├── ocr_skill.py
+│   │   └── quiz_generation_skill.py
 │   ├── models/
 │   │   ├── __init__.py
 │   │   ├── chunk.py         # Chunk 模型

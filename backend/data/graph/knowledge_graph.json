@@ -1,0 +1,8762 @@
+{
+  "nodes": [
+    {
+      "id": "cn_ch1",
+      "type": "chapter",
+      "label": "第1章 计算机网络体系结构",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": null
+    },
+    {
+      "id": "cn_ch2",
+      "type": "chapter",
+      "label": "第2章 数据链路层",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": null
+    },
+    {
+      "id": "cn_ch3",
+      "type": "chapter",
+      "label": "第3章 数据链路层",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": null
+    },
+    {
+      "id": "cn_ch4",
+      "type": "chapter",
+      "label": "第4章 网络层",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": null
+    },
+    {
+      "id": "cn_ch5",
+      "type": "chapter",
+      "label": "第5章 传输层",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": null
+    },
+    {
+      "id": "cn_ch6",
+      "type": "chapter",
+      "label": "第6章 应用层",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch1",
+      "type": "chapter",
+      "label": "第1章 计算机系统概述",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch2",
+      "type": "chapter",
+      "label": "第2章 数据的表示和运算",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch3",
+      "type": "chapter",
+      "label": "第3章 存储系统",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch4",
+      "type": "chapter",
+      "label": "第4章 指令系统",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch5",
+      "type": "chapter",
+      "label": "第5章 中央处理器",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch6",
+      "type": "chapter",
+      "label": "第6章 总线",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": null
+    },
+    {
+      "id": "co_ch7",
+      "type": "chapter",
+      "label": "第7章 输入/输出系统",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch1",
+      "type": "chapter",
+      "label": "第1章 绪论",
+      "subject_code": "ds",
+      "chapter": "1",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch2",
+      "type": "chapter",
+      "label": "第2章 线性表",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch3",
+      "type": "chapter",
+      "label": "第3章 栈、队列和数组",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch4",
+      "type": "chapter",
+      "label": "第4章 串",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch5",
+      "type": "chapter",
+      "label": "第5章 树与二叉树",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch6",
+      "type": "chapter",
+      "label": "第6章 图",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch7",
+      "type": "chapter",
+      "label": "第7章 查找",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": null
+    },
+    {
+      "id": "ds_ch8",
+      "type": "chapter",
+      "label": "第8章 排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": null
+    },
+    {
+      "id": "os_ch1",
+      "type": "chapter",
+      "label": "第1章 计算机系统概述",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": null
+    },
+    {
+      "id": "os_ch2",
+      "type": "chapter",
+      "label": "第2章 进程与线程",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": null
+    },
+    {
+      "id": "os_ch3",
+      "type": "chapter",
+      "label": "第3章 内存管理",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": null
+    },
+    {
+      "id": "os_ch4",
+      "type": "chapter",
+      "label": "第4章 文件管理",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": null
+    },
+    {
+      "id": "os_ch5",
+      "type": "chapter",
+      "label": "第5章 输入/输出管理",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": null
+    },
+    {
+      "id": "cn_1.1.1",
+      "type": "concept",
+      "label": "计算机网络的概念",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.1.1"
+    },
+    {
+      "id": "cn_1.1.2",
+      "type": "concept",
+      "label": "计算机网络的组成",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.1.2"
+    },
+    {
+      "id": "cn_1.1.3",
+      "type": "concept",
+      "label": "计算机网络的功能",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.1.3"
+    },
+    {
+      "id": "cn_1.1.4",
+      "type": "concept",
+      "label": "电路交换、报文交换与分组交换",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.1.4"
+    },
+    {
+      "id": "cn_1.1.5",
+      "type": "concept",
+      "label": "计算机网络的分类",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.1.5"
+    },
+    {
+      "id": "cn_1.1.6",
+      "type": "concept",
+      "label": "计算机网络的性能指标",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.1.6"
+    },
+    {
+      "id": "cn_1.2.1",
+      "type": "concept",
+      "label": "计算机网络分层结构",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.2.1"
+    },
+    {
+      "id": "cn_1.2.2",
+      "type": "concept",
+      "label": "计算机网络协议、接口、服务的概念",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.2.2"
+    },
+    {
+      "id": "cn_1.2.3",
+      "type": "concept",
+      "label": "ISO/OSI参考模型和TCP/IP模型",
+      "subject_code": "cn",
+      "chapter": "1",
+      "chunk_id": "cn_1.2.3"
+    },
+    {
+      "id": "cn_2.1.1",
+      "type": "concept",
+      "label": "基本概念",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.1.1"
+    },
+    {
+      "id": "cn_2.1.2",
+      "type": "concept",
+      "label": "信道的极限容量",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.1.2"
+    },
+    {
+      "id": "cn_2.1.3",
+      "type": "algorithm",
+      "label": "编码与调制",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.1.3"
+    },
+    {
+      "id": "cn_2.2.1",
+      "type": "concept",
+      "label": "双绞线、同轴电缆、光纤与无线传输介质",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.2.1"
+    },
+    {
+      "id": "cn_2.2.2",
+      "type": "concept",
+      "label": "物理层接口的特性",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.2.2"
+    },
+    {
+      "id": "cn_2.3.1",
+      "type": "concept",
+      "label": "中继器",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.3.1"
+    },
+    {
+      "id": "cn_2.3.2",
+      "type": "concept",
+      "label": "集线器",
+      "subject_code": "cn",
+      "chapter": "2",
+      "chunk_id": "cn_2.3.2"
+    },
+    {
+      "id": "cn_3.1.1",
+      "type": "concept",
+      "label": "数据链路层所处的地位",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.1.1"
+    },
+    {
+      "id": "cn_3.1.2",
+      "type": "concept",
+      "label": "链路管理",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.1.2"
+    },
+    {
+      "id": "cn_3.1.5",
+      "type": "concept",
+      "label": "差错检测",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.1.5"
+    },
+    {
+      "id": "cn_3.2.1",
+      "type": "concept",
+      "label": "字符计数法",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.2.1"
+    },
+    {
+      "id": "cn_3.2.2",
+      "type": "concept",
+      "label": "字节填充法",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.2.2"
+    },
+    {
+      "id": "cn_3.2.3",
+      "type": "concept",
+      "label": "零比特填充法",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.2.3"
+    },
+    {
+      "id": "cn_3.3.1",
+      "type": "algorithm",
+      "label": "检错编码",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.3.1"
+    },
+    {
+      "id": "cn_3.3.2",
+      "type": "algorithm",
+      "label": "纠错编码",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.3.2"
+    },
+    {
+      "id": "cn_3.4.1",
+      "type": "concept",
+      "label": "流量控制与滑动窗口机制",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.4.1"
+    },
+    {
+      "id": "cn_3.4.2",
+      "type": "concept",
+      "label": "可靠传输机制",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.4.2"
+    },
+    {
+      "id": "cn_3.5.1",
+      "type": "concept",
+      "label": "信道划分介质访问控制",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.5.1"
+    },
+    {
+      "id": "cn_3.5.2_0",
+      "type": "concept",
+      "label": "随机访问介质访问控制",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.5.2_0"
+    },
+    {
+      "id": "cn_3.5.3",
+      "type": "concept",
+      "label": "轮询访问：令牌传递协议",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.5.3"
+    },
+    {
+      "id": "cn_3.6.1",
+      "type": "concept",
+      "label": "局域网的基本概念和体系结构",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.6.1"
+    },
+    {
+      "id": "cn_3.6.2",
+      "type": "concept",
+      "label": "以太网与 IEEE 802.3",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.6.2"
+    },
+    {
+      "id": "cn_3.6.3",
+      "type": "concept",
+      "label": "IEEE 802.11 无线局域网",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.6.3"
+    },
+    {
+      "id": "cn_3.6.4",
+      "type": "concept",
+      "label": "VLAN 基本概念与基本原理",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.6.4"
+    },
+    {
+      "id": "cn_3.7.1",
+      "type": "concept",
+      "label": "广域网的基本概念",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.7.1"
+    },
+    {
+      "id": "cn_3.7.2",
+      "type": "concept",
+      "label": "点对点协议",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.7.2"
+    },
+    {
+      "id": "cn_3.8.2",
+      "type": "concept",
+      "label": "以太网交换机",
+      "subject_code": "cn",
+      "chapter": "3",
+      "chunk_id": "cn_3.8.2"
+    },
+    {
+      "id": "cn_4.1.1",
+      "type": "concept",
+      "label": "异构网络互连",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.1.1"
+    },
+    {
+      "id": "cn_4.1.2",
+      "type": "algorithm",
+      "label": "路由与转发",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.1.2"
+    },
+    {
+      "id": "cn_4.1.3",
+      "type": "concept",
+      "label": "网络层提供的两种服务",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.1.3"
+    },
+    {
+      "id": "cn_4.1.4",
+      "type": "concept",
+      "label": "SDN 的基本概念",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.1.4"
+    },
+    {
+      "id": "cn_4.1.5",
+      "type": "concept",
+      "label": "拥塞控制",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.1.5"
+    },
+    {
+      "id": "cn_4.2.1",
+      "type": "concept",
+      "label": "IPv4 分组",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.1"
+    },
+    {
+      "id": "cn_4.2.2",
+      "type": "concept",
+      "label": "IPv4 地址与 NAT",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.2"
+    },
+    {
+      "id": "cn_4.2.3",
+      "type": "algorithm",
+      "label": "划分子网与路由聚合",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.3"
+    },
+    {
+      "id": "cn_4.2.4",
+      "type": "concept",
+      "label": "网络层转发分组的过程",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.4"
+    },
+    {
+      "id": "cn_4.2.5",
+      "type": "concept",
+      "label": "地址解析协议",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.5"
+    },
+    {
+      "id": "cn_4.2.6",
+      "type": "concept",
+      "label": "动态主机配置协议 DHCP",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.6"
+    },
+    {
+      "id": "cn_4.2.7",
+      "type": "concept",
+      "label": "网际控制报文协议 ICMP",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.2.7"
+    },
+    {
+      "id": "cn_4.3.1",
+      "type": "concept",
+      "label": "IPv6 的特点",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.3.1"
+    },
+    {
+      "id": "cn_4.3.2",
+      "type": "concept",
+      "label": "IPv6 数据报的基本首部",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.3.2"
+    },
+    {
+      "id": "cn_4.3.3",
+      "type": "concept",
+      "label": "IPv6 地址",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.3.3"
+    },
+    {
+      "id": "cn_4.3.4",
+      "type": "concept",
+      "label": "从 IPv4 向 IPv6 过渡",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.3.4"
+    },
+    {
+      "id": "cn_4.4.1",
+      "type": "algorithm",
+      "label": "路由算法",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.4.1"
+    },
+    {
+      "id": "cn_4.4.2",
+      "type": "algorithm",
+      "label": "分层次的路由选择协议",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.4.2"
+    },
+    {
+      "id": "cn_4.4.3",
+      "type": "algorithm",
+      "label": "路由信息协议",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.4.3"
+    },
+    {
+      "id": "cn_4.4.4",
+      "type": "concept",
+      "label": "开放最短路径优先协议",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.4.4"
+    },
+    {
+      "id": "cn_4.4.5",
+      "type": "concept",
+      "label": "边界网关协议",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.4.5"
+    },
+    {
+      "id": "cn_4.5.1",
+      "type": "concept",
+      "label": "多播的概念",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.5.1"
+    },
+    {
+      "id": "cn_4.5.2",
+      "type": "concept",
+      "label": "IP 多播地址",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.5.2"
+    },
+    {
+      "id": "cn_4.5.3",
+      "type": "concept",
+      "label": "在局域网上进行硬件多播",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.5.3"
+    },
+    {
+      "id": "cn_4.5.4",
+      "type": "algorithm",
+      "label": "IGMP 与多播路由协议",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.5.4"
+    },
+    {
+      "id": "cn_4.6.1",
+      "type": "concept",
+      "label": "移动 IP 的概念",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.6.1"
+    },
+    {
+      "id": "cn_4.6.2",
+      "type": "concept",
+      "label": "移动 IP 通信过程",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.6.2"
+    },
+    {
+      "id": "cn_4.7.1",
+      "type": "concept",
+      "label": "冲突域和广播域",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.7.1"
+    },
+    {
+      "id": "cn_4.7.2",
+      "type": "algorithm",
+      "label": "路由器的组成和功能",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.7.2"
+    },
+    {
+      "id": "cn_4.7.3",
+      "type": "algorithm",
+      "label": "路由表与分组转发",
+      "subject_code": "cn",
+      "chapter": "4",
+      "chunk_id": "cn_4.7.3"
+    },
+    {
+      "id": "cn_5.1.1",
+      "type": "concept",
+      "label": "传输层的功能",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.1.1"
+    },
+    {
+      "id": "cn_5.1.2",
+      "type": "concept",
+      "label": "传输层的寻址与端口",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.1.2"
+    },
+    {
+      "id": "cn_5.1.3",
+      "type": "concept",
+      "label": "无连接服务与面向连接服务",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.1.3"
+    },
+    {
+      "id": "cn_5.2.1",
+      "type": "concept",
+      "label": "UDP 数据报",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.2.1"
+    },
+    {
+      "id": "cn_5.2.2",
+      "type": "concept",
+      "label": "UDP 检验",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.2.2"
+    },
+    {
+      "id": "cn_5.3.1",
+      "type": "concept",
+      "label": "TCP 的特点",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.3.1"
+    },
+    {
+      "id": "cn_5.3.2",
+      "type": "concept",
+      "label": "TCP 报文段",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.3.2"
+    },
+    {
+      "id": "cn_5.3.3",
+      "type": "concept",
+      "label": "TCP 连接管理",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.3.3"
+    },
+    {
+      "id": "cn_5.3.4",
+      "type": "concept",
+      "label": "TCP 可靠传输",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.3.4"
+    },
+    {
+      "id": "cn_5.3.5",
+      "type": "concept",
+      "label": "TCP 流量控制",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.3.5"
+    },
+    {
+      "id": "cn_5.3.6",
+      "type": "concept",
+      "label": "TCP 拥塞控制",
+      "subject_code": "cn",
+      "chapter": "5",
+      "chunk_id": "cn_5.3.6"
+    },
+    {
+      "id": "cn_6.1.1",
+      "type": "concept",
+      "label": "客户/服务器模型",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.1.1"
+    },
+    {
+      "id": "cn_6.1.2",
+      "type": "concept",
+      "label": "P2P 模型",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.1.2"
+    },
+    {
+      "id": "cn_6.2.1",
+      "type": "concept",
+      "label": "层次域名空间",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.2.1"
+    },
+    {
+      "id": "cn_6.2.2",
+      "type": "concept",
+      "label": "域名服务器",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.2.2"
+    },
+    {
+      "id": "cn_6.2.3",
+      "type": "concept",
+      "label": "域名解析过程",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.2.3"
+    },
+    {
+      "id": "cn_6.3.1",
+      "type": "concept",
+      "label": "FTP 的工作原理",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.3.1"
+    },
+    {
+      "id": "cn_6.3.2",
+      "type": "concept",
+      "label": "控制连接与数据连接",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.3.2"
+    },
+    {
+      "id": "cn_6.4.1",
+      "type": "concept",
+      "label": "电子邮件系统的组成结构",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.4.1"
+    },
+    {
+      "id": "cn_6.4.2",
+      "type": "concept",
+      "label": "电子邮件格式与 MIME",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.4.2"
+    },
+    {
+      "id": "cn_6.4.3",
+      "type": "concept",
+      "label": "SMTP 和 POP3",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.4.3"
+    },
+    {
+      "id": "cn_6.5.1",
+      "type": "concept",
+      "label": "WWW 的概念与组成结构",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.5.1"
+    },
+    {
+      "id": "cn_6.5.2",
+      "type": "concept",
+      "label": "超文本传输协议",
+      "subject_code": "cn",
+      "chapter": "6",
+      "chunk_id": "cn_6.5.2"
+    },
+    {
+      "id": "co_1.2.1",
+      "type": "concept",
+      "label": "计算机系统的组成",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.2.1"
+    },
+    {
+      "id": "co_1.2.2",
+      "type": "concept",
+      "label": "计算机硬件",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.2.2"
+    },
+    {
+      "id": "co_1.2.3",
+      "type": "concept",
+      "label": "计算机软件",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.2.3"
+    },
+    {
+      "id": "co_1.2.4",
+      "type": "concept",
+      "label": "计算机系统的层次结构",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.2.4"
+    },
+    {
+      "id": "co_1.2.5",
+      "type": "concept",
+      "label": "计算机系统的工作原理",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.2.5"
+    },
+    {
+      "id": "co_1.3.1",
+      "type": "concept",
+      "label": "计算机的主要性能指标",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.3.1"
+    },
+    {
+      "id": "co_1.3.2",
+      "type": "concept",
+      "label": "几个专业术语",
+      "subject_code": "co",
+      "chapter": "1",
+      "chunk_id": "co_1.3.2"
+    },
+    {
+      "id": "co_2.1.1",
+      "type": "concept",
+      "label": "进位计数制及其相互转换",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.1.1"
+    },
+    {
+      "id": "co_2.1.2",
+      "type": "algorithm",
+      "label": "定点数的编码表示",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.1.2"
+    },
+    {
+      "id": "co_2.1.3",
+      "type": "concept",
+      "label": "整数的表示",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.1.3"
+    },
+    {
+      "id": "co_2.1.4",
+      "type": "concept",
+      "label": "C语言中的整数类型及类型转换",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.1.4"
+    },
+    {
+      "id": "co_2.2.1",
+      "type": "concept",
+      "label": "基本运算部件",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.2.1"
+    },
+    {
+      "id": "co_2.2.2",
+      "type": "concept",
+      "label": "定点数的移位运算",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.2.2"
+    },
+    {
+      "id": "co_2.2.3",
+      "type": "concept",
+      "label": "定点数的加减运算",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.2.3"
+    },
+    {
+      "id": "co_2.2.4",
+      "type": "concept",
+      "label": "定点数的乘除运算",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.2.4"
+    },
+    {
+      "id": "co_2.3.1",
+      "type": "concept",
+      "label": "浮点数的表示",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.3.1"
+    },
+    {
+      "id": "co_2.3.2",
+      "type": "concept",
+      "label": "浮点数的加减运算",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.3.2"
+    },
+    {
+      "id": "co_2.3.3",
+      "type": "concept",
+      "label": "C语言中的浮点数类型",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.3.3"
+    },
+    {
+      "id": "co_2.3.4",
+      "type": "concept",
+      "label": "数据的大小端和对齐存储",
+      "subject_code": "co",
+      "chapter": "2",
+      "chunk_id": "co_2.3.4"
+    },
+    {
+      "id": "co_3.1.1",
+      "type": "concept",
+      "label": "存储器的分类",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.1.1"
+    },
+    {
+      "id": "co_3.1.2",
+      "type": "concept",
+      "label": "存储器的性能指标",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.1.2"
+    },
+    {
+      "id": "co_3.1.3",
+      "type": "concept",
+      "label": "多级层次的存储系统",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.1.3"
+    },
+    {
+      "id": "co_3.2.1",
+      "type": "concept",
+      "label": "SRAM芯片和DRAM芯片",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.2.1"
+    },
+    {
+      "id": "co_3.2.2",
+      "type": "concept",
+      "label": "只读存储器",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.2.2"
+    },
+    {
+      "id": "co_3.2.3",
+      "type": "concept",
+      "label": "主存储器的基本组成",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.2.3"
+    },
+    {
+      "id": "co_3.2.4",
+      "type": "concept",
+      "label": "多模块存储器",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.2.4"
+    },
+    {
+      "id": "co_3.3.1",
+      "type": "concept",
+      "label": "连接原理",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.3.1"
+    },
+    {
+      "id": "co_3.3.2",
+      "type": "concept",
+      "label": "主存容量的扩展",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.3.2"
+    },
+    {
+      "id": "co_3.3.3",
+      "type": "concept",
+      "label": "存储芯片的地址分配和片选",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.3.3"
+    },
+    {
+      "id": "co_3.3.4",
+      "type": "concept",
+      "label": "存储器与CPU的连接",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.3.4"
+    },
+    {
+      "id": "co_3.4.1",
+      "type": "concept",
+      "label": "磁盘存储器",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.4.1"
+    },
+    {
+      "id": "co_3.4.2",
+      "type": "concept",
+      "label": "固态硬盘",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.4.2"
+    },
+    {
+      "id": "co_3.5.1",
+      "type": "concept",
+      "label": "程序访问的局部性原理",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.5.1"
+    },
+    {
+      "id": "co_3.5.2",
+      "type": "concept",
+      "label": "Cache的基本工作原理",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.5.2"
+    },
+    {
+      "id": "co_3.5.3",
+      "type": "concept",
+      "label": "Cache和主存的映射方式",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.5.3"
+    },
+    {
+      "id": "co_3.5.4",
+      "type": "algorithm",
+      "label": "Cache中主存块的替换算法",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.5.4"
+    },
+    {
+      "id": "co_3.5.5",
+      "type": "concept",
+      "label": "Cache的一致性问题",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.5.5"
+    },
+    {
+      "id": "co_3.6.1",
+      "type": "concept",
+      "label": "虚拟存储器的基本概念",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.6.1"
+    },
+    {
+      "id": "co_3.6.2",
+      "type": "concept",
+      "label": "页式虚拟存储器",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.6.2"
+    },
+    {
+      "id": "co_3.6.3",
+      "type": "concept",
+      "label": "段式虚拟存储器",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.6.3"
+    },
+    {
+      "id": "co_3.6.4",
+      "type": "concept",
+      "label": "段页式虚拟存储器",
+      "subject_code": "co",
+      "chapter": "3",
+      "chunk_id": "co_3.6.4"
+    },
+    {
+      "id": "co_4.1.1",
+      "type": "concept",
+      "label": "指令集体系结构",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.1.1"
+    },
+    {
+      "id": "co_4.1.2",
+      "type": "concept",
+      "label": "指令的基本格式",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.1.2"
+    },
+    {
+      "id": "co_4.1.3",
+      "type": "concept",
+      "label": "定长操作码指令格式",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.1.3"
+    },
+    {
+      "id": "co_4.1.4",
+      "type": "concept",
+      "label": "扩展操作码指令格式",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.1.4"
+    },
+    {
+      "id": "co_4.1.5",
+      "type": "concept",
+      "label": "指令的操作类型",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.1.5"
+    },
+    {
+      "id": "co_4.2.1",
+      "type": "concept",
+      "label": "指令寻址和数据寻址",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.2.1"
+    },
+    {
+      "id": "co_4.2.2",
+      "type": "concept",
+      "label": "常见的数据寻址方式",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.2.2"
+    },
+    {
+      "id": "co_4.3.1_0",
+      "type": "concept",
+      "label": "常用汇编指令介绍",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.3.1_0"
+    },
+    {
+      "id": "co_4.3.2",
+      "type": "concept",
+      "label": "选择语句的机器级表示",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.3.2"
+    },
+    {
+      "id": "co_4.3.3",
+      "type": "concept",
+      "label": "循环语句的机器级表示",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.3.3"
+    },
+    {
+      "id": "co_4.3.4",
+      "type": "concept",
+      "label": "过程调用的机器级表示",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.3.4"
+    },
+    {
+      "id": "co_4.4.1",
+      "type": "concept",
+      "label": "复杂指令系统计算机（CISC）",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.4.1"
+    },
+    {
+      "id": "co_4.4.3",
+      "type": "concept",
+      "label": "CISC和RISC的比较",
+      "subject_code": "co",
+      "chapter": "4",
+      "chunk_id": "co_4.4.3"
+    },
+    {
+      "id": "co_5.1.1",
+      "type": "concept",
+      "label": "CPU的功能",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.1.1"
+    },
+    {
+      "id": "co_5.1.2",
+      "type": "concept",
+      "label": "CPU的基本结构",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.1.2"
+    },
+    {
+      "id": "co_5.1.3",
+      "type": "concept",
+      "label": "CPU的寄存器",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.1.3"
+    },
+    {
+      "id": "co_5.2.1",
+      "type": "concept",
+      "label": "指令周期",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.2.1"
+    },
+    {
+      "id": "co_5.2.2",
+      "type": "concept",
+      "label": "指令周期的数据流",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.2.2"
+    },
+    {
+      "id": "co_5.2.3",
+      "type": "concept",
+      "label": "指令执行方案",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.2.3"
+    },
+    {
+      "id": "co_5.3.1",
+      "type": "concept",
+      "label": "数据通路的功能",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.3.1"
+    },
+    {
+      "id": "co_5.3.2",
+      "type": "concept",
+      "label": "数据通路的组成",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.3.2"
+    },
+    {
+      "id": "co_5.3.3",
+      "type": "concept",
+      "label": "数据通路的基本结构",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.3.3"
+    },
+    {
+      "id": "co_5.3.4",
+      "type": "concept",
+      "label": "数据通路的操作举例",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.3.4"
+    },
+    {
+      "id": "co_5.4.1",
+      "type": "concept",
+      "label": "控制器的结构和功能",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.4.1"
+    },
+    {
+      "id": "co_5.4.2",
+      "type": "concept",
+      "label": "硬布线控制器",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.4.2"
+    },
+    {
+      "id": "co_5.4.3",
+      "type": "concept",
+      "label": "微程序控制器",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.4.3"
+    },
+    {
+      "id": "co_5.5.1",
+      "type": "concept",
+      "label": "异常和中断的基本概念",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.5.1"
+    },
+    {
+      "id": "co_5.5.2",
+      "type": "concept",
+      "label": "异常和中断的分类",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.5.2"
+    },
+    {
+      "id": "co_5.5.3",
+      "type": "concept",
+      "label": "异常和中断响应过程",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.5.3"
+    },
+    {
+      "id": "co_5.6.1",
+      "type": "concept",
+      "label": "指令流水线的基本概念",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.6.1"
+    },
+    {
+      "id": "co_5.6.2",
+      "type": "concept",
+      "label": "流水线的基本实现",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.6.2"
+    },
+    {
+      "id": "co_5.6.3",
+      "type": "concept",
+      "label": "流水线的冒险与处理",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.6.3"
+    },
+    {
+      "id": "co_5.6.4",
+      "type": "concept",
+      "label": "流水线的性能指标",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.6.4"
+    },
+    {
+      "id": "co_5.6.5",
+      "type": "concept",
+      "label": "高级流水线技术",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.6.5"
+    },
+    {
+      "id": "co_5.7.1",
+      "type": "concept",
+      "label": "SISD、SIMD、MIMD的基本概念",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.7.1"
+    },
+    {
+      "id": "co_5.7.2",
+      "type": "concept",
+      "label": "硬件多线程的基本概念",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.7.2"
+    },
+    {
+      "id": "co_5.7.3",
+      "type": "concept",
+      "label": "多核处理器的基本概念",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.7.3"
+    },
+    {
+      "id": "co_5.7.4",
+      "type": "concept",
+      "label": "共享内存多处理器的基本概念",
+      "subject_code": "co",
+      "chapter": "5",
+      "chunk_id": "co_5.7.4"
+    },
+    {
+      "id": "co_6.1.1",
+      "type": "concept",
+      "label": "总线基本概念",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": "co_6.1.1"
+    },
+    {
+      "id": "co_6.1.2",
+      "type": "concept",
+      "label": "总线的分类",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": "co_6.1.2"
+    },
+    {
+      "id": "co_6.1.3",
+      "type": "concept",
+      "label": "系统总线的结构",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": "co_6.1.3"
+    },
+    {
+      "id": "co_6.1.5",
+      "type": "concept",
+      "label": "总线的性能指标",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": "co_6.1.5"
+    },
+    {
+      "id": "co_6.2.1",
+      "type": "concept",
+      "label": "总线事务",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": "co_6.2.1"
+    },
+    {
+      "id": "co_6.2.2",
+      "type": "concept",
+      "label": "总线定时",
+      "subject_code": "co",
+      "chapter": "6",
+      "chunk_id": "co_6.2.2"
+    },
+    {
+      "id": "co_7.2.2",
+      "type": "concept",
+      "label": "I/O接口的基本结构",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": "co_7.2.2"
+    },
+    {
+      "id": "co_7.2.3",
+      "type": "concept",
+      "label": "I/O接口的类型",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": "co_7.2.3"
+    },
+    {
+      "id": "co_7.2.4",
+      "type": "concept",
+      "label": "I/O端口及其编址",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": "co_7.2.4"
+    },
+    {
+      "id": "co_7.3.1",
+      "type": "concept",
+      "label": "程序查询方式",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": "co_7.3.1"
+    },
+    {
+      "id": "co_7.3.2",
+      "type": "concept",
+      "label": "程序中断方式",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": "co_7.3.2"
+    },
+    {
+      "id": "co_7.3.3",
+      "type": "concept",
+      "label": "DMA方式",
+      "subject_code": "co",
+      "chapter": "7",
+      "chunk_id": "co_7.3.3"
+    },
+    {
+      "id": "ds_1.1.1",
+      "type": "concept",
+      "label": "基本概念和术语",
+      "subject_code": "ds",
+      "chapter": "1",
+      "chunk_id": "ds_1.1.1"
+    },
+    {
+      "id": "ds_1.1.2",
+      "type": "concept",
+      "label": "数据结构三要素",
+      "subject_code": "ds",
+      "chapter": "1",
+      "chunk_id": "ds_1.1.2"
+    },
+    {
+      "id": "ds_1.2.1",
+      "type": "algorithm",
+      "label": "算法的基本概念",
+      "subject_code": "ds",
+      "chapter": "1",
+      "chunk_id": "ds_1.2.1"
+    },
+    {
+      "id": "ds_1.2.2",
+      "type": "algorithm",
+      "label": "算法效率的度量",
+      "subject_code": "ds",
+      "chapter": "1",
+      "chunk_id": "ds_1.2.2"
+    },
+    {
+      "id": "ds_2.1.1",
+      "type": "concept",
+      "label": "线性表的定义",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.1.1"
+    },
+    {
+      "id": "ds_2.1.2",
+      "type": "concept",
+      "label": "线性表的基本操作",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.1.2"
+    },
+    {
+      "id": "ds_2.2.1",
+      "type": "concept",
+      "label": "顺序表的定义",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.2.1"
+    },
+    {
+      "id": "ds_2.2.2",
+      "type": "concept",
+      "label": "顺序表上基本操作的实现",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.2.2"
+    },
+    {
+      "id": "ds_2.3.1",
+      "type": "concept",
+      "label": "单链表的定义",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.3.1"
+    },
+    {
+      "id": "ds_2.3.2",
+      "type": "concept",
+      "label": "单链表上基本操作的实现",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.3.2"
+    },
+    {
+      "id": "ds_2.3.3",
+      "type": "concept",
+      "label": "双链表",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.3.3"
+    },
+    {
+      "id": "ds_2.3.4",
+      "type": "concept",
+      "label": "循环链表",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.3.4"
+    },
+    {
+      "id": "ds_2.3.5",
+      "type": "concept",
+      "label": "静态链表",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.3.5"
+    },
+    {
+      "id": "ds_2.3.6",
+      "type": "concept",
+      "label": "顺序表和链表的比较",
+      "subject_code": "ds",
+      "chapter": "2",
+      "chunk_id": "ds_2.3.6"
+    },
+    {
+      "id": "ds_3.1.1",
+      "type": "concept",
+      "label": "栈的基本概念",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.1.1"
+    },
+    {
+      "id": "ds_3.1.2",
+      "type": "concept",
+      "label": "栈的顺序存储结构",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.1.2"
+    },
+    {
+      "id": "ds_3.1.3",
+      "type": "concept",
+      "label": "栈的链式存储结构",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.1.3"
+    },
+    {
+      "id": "ds_3.2.1",
+      "type": "concept",
+      "label": "队列的基本概念",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.2.1"
+    },
+    {
+      "id": "ds_3.2.2",
+      "type": "concept",
+      "label": "队列的顺序存储结构",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.2.2"
+    },
+    {
+      "id": "ds_3.2.3",
+      "type": "concept",
+      "label": "队列的链式存储结构",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.2.3"
+    },
+    {
+      "id": "ds_3.2.4",
+      "type": "concept",
+      "label": "双端队列",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.2.4"
+    },
+    {
+      "id": "ds_3.3.1",
+      "type": "concept",
+      "label": "栈在括号匹配中的应用",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.3.1"
+    },
+    {
+      "id": "ds_3.3.2",
+      "type": "concept",
+      "label": "栈在表达式求值中的应用",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.3.2"
+    },
+    {
+      "id": "ds_3.3.3",
+      "type": "concept",
+      "label": "栈在递归中的应用",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.3.3"
+    },
+    {
+      "id": "ds_3.3.4",
+      "type": "algorithm",
+      "label": "队列在层次遍历中的应用",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.3.4"
+    },
+    {
+      "id": "ds_3.3.5",
+      "type": "concept",
+      "label": "队列在计算机系统中的应用",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.3.5"
+    },
+    {
+      "id": "ds_3.4.1",
+      "type": "concept",
+      "label": "数组的定义",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.4.1"
+    },
+    {
+      "id": "ds_3.4.2",
+      "type": "concept",
+      "label": "数组的存储结构",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.4.2"
+    },
+    {
+      "id": "ds_3.4.3",
+      "type": "concept",
+      "label": "特殊矩阵的压缩存储",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.4.3"
+    },
+    {
+      "id": "ds_3.4.4",
+      "type": "concept",
+      "label": "稀疏矩阵",
+      "subject_code": "ds",
+      "chapter": "3",
+      "chunk_id": "ds_3.4.4"
+    },
+    {
+      "id": "ds_4.1.1",
+      "type": "concept",
+      "label": "串的定义",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": "ds_4.1.1"
+    },
+    {
+      "id": "ds_4.1.2",
+      "type": "concept",
+      "label": "串的基本操作",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": "ds_4.1.2"
+    },
+    {
+      "id": "ds_4.1.3",
+      "type": "concept",
+      "label": "串的存储结构",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": "ds_4.1.3"
+    },
+    {
+      "id": "ds_4.2.1",
+      "type": "algorithm",
+      "label": "简单的模式匹配算法",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": "ds_4.2.1"
+    },
+    {
+      "id": "ds_4.2.2",
+      "type": "algorithm",
+      "label": "串的模式匹配算法——KMP算法",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": "ds_4.2.2"
+    },
+    {
+      "id": "ds_4.2.3",
+      "type": "algorithm",
+      "label": "KMP算法的进一步优化",
+      "subject_code": "ds",
+      "chapter": "4",
+      "chunk_id": "ds_4.2.3"
+    },
+    {
+      "id": "ds_5.1.1",
+      "type": "concept",
+      "label": "树的定义",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.1.1"
+    },
+    {
+      "id": "ds_5.1.2",
+      "type": "concept",
+      "label": "基本术语",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.1.2"
+    },
+    {
+      "id": "ds_5.1.3",
+      "type": "concept",
+      "label": "树的性质",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.1.3"
+    },
+    {
+      "id": "ds_5.2.1",
+      "type": "concept",
+      "label": "二叉树的定义及其主要特性",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.2.1"
+    },
+    {
+      "id": "ds_5.2.2",
+      "type": "concept",
+      "label": "二叉树的存储结构",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.2.2"
+    },
+    {
+      "id": "ds_5.3.1",
+      "type": "algorithm",
+      "label": "二叉树的遍历",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.3.1"
+    },
+    {
+      "id": "ds_5.3.2",
+      "type": "concept",
+      "label": "线索二叉树",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.3.2"
+    },
+    {
+      "id": "ds_5.4.1",
+      "type": "concept",
+      "label": "树的存储结构",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.4.1"
+    },
+    {
+      "id": "ds_5.4.2",
+      "type": "concept",
+      "label": "树、森林与二叉树的转换",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.4.2"
+    },
+    {
+      "id": "ds_5.4.3",
+      "type": "algorithm",
+      "label": "树和森林的遍历",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.4.3"
+    },
+    {
+      "id": "ds_5.5.1",
+      "type": "algorithm",
+      "label": "哈夫曼树和哈夫曼编码",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.5.1"
+    },
+    {
+      "id": "ds_5.5.2",
+      "type": "concept",
+      "label": "并查集",
+      "subject_code": "ds",
+      "chapter": "5",
+      "chunk_id": "ds_5.5.2"
+    },
+    {
+      "id": "ds_6.1.1",
+      "type": "concept",
+      "label": "图的定义",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.1.1"
+    },
+    {
+      "id": "ds_6.2.1",
+      "type": "concept",
+      "label": "邻接矩阵法",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.2.1"
+    },
+    {
+      "id": "ds_6.2.2",
+      "type": "concept",
+      "label": "邻接表法",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.2.2"
+    },
+    {
+      "id": "ds_6.2.3",
+      "type": "concept",
+      "label": "十字链表",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.2.3"
+    },
+    {
+      "id": "ds_6.2.4",
+      "type": "concept",
+      "label": "邻接多重表",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.2.4"
+    },
+    {
+      "id": "ds_6.2.5",
+      "type": "concept",
+      "label": "图的基本操作",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.2.5"
+    },
+    {
+      "id": "ds_6.3.1",
+      "type": "algorithm",
+      "label": "广度优先搜索",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.3.1"
+    },
+    {
+      "id": "ds_6.3.2",
+      "type": "algorithm",
+      "label": "深度优先搜索",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.3.2"
+    },
+    {
+      "id": "ds_6.3.3",
+      "type": "algorithm",
+      "label": "图的遍历与图的连通性",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.3.3"
+    },
+    {
+      "id": "ds_6.4.1",
+      "type": "concept",
+      "label": "最小生成树",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.4.1"
+    },
+    {
+      "id": "ds_6.4.2",
+      "type": "concept",
+      "label": "最短路径",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.4.2"
+    },
+    {
+      "id": "ds_6.4.3",
+      "type": "concept",
+      "label": "有向无环图描述表达式",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.4.3"
+    },
+    {
+      "id": "ds_6.4.4",
+      "type": "algorithm",
+      "label": "拓扑排序",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.4.4"
+    },
+    {
+      "id": "ds_6.4.5",
+      "type": "concept",
+      "label": "关键路径",
+      "subject_code": "ds",
+      "chapter": "6",
+      "chunk_id": "ds_6.4.5"
+    },
+    {
+      "id": "ds_7.2.1",
+      "type": "algorithm",
+      "label": "顺序查找",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.2.1"
+    },
+    {
+      "id": "ds_7.2.2",
+      "type": "algorithm",
+      "label": "折半查找",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.2.2"
+    },
+    {
+      "id": "ds_7.2.3",
+      "type": "algorithm",
+      "label": "分块查找",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.2.3"
+    },
+    {
+      "id": "ds_7.3.1",
+      "type": "algorithm",
+      "label": "二叉排序树（BST）",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.3.1"
+    },
+    {
+      "id": "ds_7.3.2",
+      "type": "concept",
+      "label": "平衡二叉树",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.3.2"
+    },
+    {
+      "id": "ds_7.3.3",
+      "type": "concept",
+      "label": "红黑树",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.3.3"
+    },
+    {
+      "id": "ds_7.4.1",
+      "type": "concept",
+      "label": "B树及其基本操作",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.4.1"
+    },
+    {
+      "id": "ds_7.4.2",
+      "type": "concept",
+      "label": "B+树的基本概念",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.4.2"
+    },
+    {
+      "id": "ds_7.5.1",
+      "type": "algorithm",
+      "label": "散列表的基本概念",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.5.1"
+    },
+    {
+      "id": "ds_7.5.2",
+      "type": "algorithm",
+      "label": "散列函数的构造方法",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.5.2"
+    },
+    {
+      "id": "ds_7.5.3",
+      "type": "concept",
+      "label": "处理冲突的方法",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.5.3"
+    },
+    {
+      "id": "ds_7.5.4",
+      "type": "algorithm",
+      "label": "散列查找及性能分析的应用",
+      "subject_code": "ds",
+      "chapter": "7",
+      "chunk_id": "ds_7.5.4"
+    },
+    {
+      "id": "ds_8.1.1",
+      "type": "algorithm",
+      "label": "排序的定义",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.1.1"
+    },
+    {
+      "id": "ds_8.2.1",
+      "type": "algorithm",
+      "label": "直接插入排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.2.1"
+    },
+    {
+      "id": "ds_8.2.2",
+      "type": "algorithm",
+      "label": "折半插入排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.2.2"
+    },
+    {
+      "id": "ds_8.2.3",
+      "type": "algorithm",
+      "label": "希尔排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.2.3"
+    },
+    {
+      "id": "ds_8.3.1",
+      "type": "algorithm",
+      "label": "冒泡排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.3.1"
+    },
+    {
+      "id": "ds_8.3.2",
+      "type": "algorithm",
+      "label": "快速排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.3.2"
+    },
+    {
+      "id": "ds_8.4.1",
+      "type": "algorithm",
+      "label": "简单选择排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.4.1"
+    },
+    {
+      "id": "ds_8.4.2",
+      "type": "algorithm",
+      "label": "堆排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.4.2"
+    },
+    {
+      "id": "ds_8.5.1",
+      "type": "algorithm",
+      "label": "归并排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.5.1"
+    },
+    {
+      "id": "ds_8.5.2",
+      "type": "algorithm",
+      "label": "基数排序",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.5.2"
+    },
+    {
+      "id": "ds_8.6.1",
+      "type": "algorithm",
+      "label": "内部排序算法的比较",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.6.1"
+    },
+    {
+      "id": "ds_8.6.2",
+      "type": "algorithm",
+      "label": "内部排序算法的应用",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.6.2"
+    },
+    {
+      "id": "ds_8.7.1",
+      "type": "algorithm",
+      "label": "外部排序的基本概念",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.7.1"
+    },
+    {
+      "id": "ds_8.7.2",
+      "type": "algorithm",
+      "label": "外部排序的方法",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.7.2"
+    },
+    {
+      "id": "ds_8.7.3",
+      "type": "concept",
+      "label": "多路平衡归并与败者树",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.7.3"
+    },
+    {
+      "id": "ds_8.7.4",
+      "type": "algorithm",
+      "label": "置换-选择排序（生成初始归并段）",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.7.4"
+    },
+    {
+      "id": "ds_8.7.5",
+      "type": "concept",
+      "label": "最佳归并树",
+      "subject_code": "ds",
+      "chapter": "8",
+      "chunk_id": "ds_8.7.5"
+    },
+    {
+      "id": "os_1.1.1",
+      "type": "concept",
+      "label": "操作系统的概念",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.1.1"
+    },
+    {
+      "id": "os_1.1.2",
+      "type": "concept",
+      "label": "操作系统的功能和目标",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.1.2"
+    },
+    {
+      "id": "os_1.1.3",
+      "type": "concept",
+      "label": "操作系统的特征",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.1.3"
+    },
+    {
+      "id": "os_1.2.1",
+      "type": "concept",
+      "label": "手工操作阶段（此阶段无操作系统）",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.2.1"
+    },
+    {
+      "id": "os_1.2.2",
+      "type": "concept",
+      "label": "批处理阶段（操作系统开始出现）",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.2.2"
+    },
+    {
+      "id": "os_1.2.3",
+      "type": "concept",
+      "label": "分时操作系统",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.2.3"
+    },
+    {
+      "id": "os_1.2.4",
+      "type": "concept",
+      "label": "实时操作系统",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.2.4"
+    },
+    {
+      "id": "os_1.2.6",
+      "type": "concept",
+      "label": "个人计算机操作系统",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.2.6"
+    },
+    {
+      "id": "os_1.3.1",
+      "type": "concept",
+      "label": "处理器运行模式",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.3.1"
+    },
+    {
+      "id": "os_1.3.2",
+      "type": "concept",
+      "label": "中断和异常的概念",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.3.2"
+    },
+    {
+      "id": "os_1.3.3",
+      "type": "concept",
+      "label": "系统调用",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.3.3"
+    },
+    {
+      "id": "os_1.6.1",
+      "type": "concept",
+      "label": "虚拟机的基本概念",
+      "subject_code": "os",
+      "chapter": "1",
+      "chunk_id": "os_1.6.1"
+    },
+    {
+      "id": "os_2.1.1",
+      "type": "concept",
+      "label": "进程的概念和特征",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.1"
+    },
+    {
+      "id": "os_2.1.2",
+      "type": "concept",
+      "label": "进程的组成",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.2"
+    },
+    {
+      "id": "os_2.1.3",
+      "type": "concept",
+      "label": "进程的状态与转换",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.3"
+    },
+    {
+      "id": "os_2.1.4",
+      "type": "concept",
+      "label": "进程控制",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.4"
+    },
+    {
+      "id": "os_2.1.5",
+      "type": "concept",
+      "label": "进程的通信",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.5"
+    },
+    {
+      "id": "os_2.1.6",
+      "type": "concept",
+      "label": "线程和多线程模型",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.6"
+    },
+    {
+      "id": "os_2.1.7",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.1.7"
+    },
+    {
+      "id": "os_2.2.1",
+      "type": "algorithm",
+      "label": "调度的概念",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.1"
+    },
+    {
+      "id": "os_2.2.2",
+      "type": "algorithm",
+      "label": "调度的实现",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.2"
+    },
+    {
+      "id": "os_2.2.3",
+      "type": "algorithm",
+      "label": "调度的目标",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.3"
+    },
+    {
+      "id": "os_2.2.4",
+      "type": "concept",
+      "label": "进程切换",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.4"
+    },
+    {
+      "id": "os_2.2.5_0",
+      "type": "algorithm",
+      "label": "CPU调度算法",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.5_0"
+    },
+    {
+      "id": "os_2.2.6",
+      "type": "algorithm",
+      "label": "多处理机调度",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.6"
+    },
+    {
+      "id": "os_2.2.7",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.2.7"
+    },
+    {
+      "id": "os_2.3.1",
+      "type": "concept",
+      "label": "同步与互斥的基本概念",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.1"
+    },
+    {
+      "id": "os_2.3.2",
+      "type": "concept",
+      "label": "实现临界区互斥的基本方法",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.2"
+    },
+    {
+      "id": "os_2.3.3",
+      "type": "concept",
+      "label": "互斥锁",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.3"
+    },
+    {
+      "id": "os_2.3.4",
+      "type": "concept",
+      "label": "信号量",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.4"
+    },
+    {
+      "id": "os_2.3.5_0",
+      "type": "concept",
+      "label": "经典同步问题",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.5_0"
+    },
+    {
+      "id": "os_2.3.6",
+      "type": "concept",
+      "label": "管程",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.6"
+    },
+    {
+      "id": "os_2.3.7",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.3.7"
+    },
+    {
+      "id": "os_2.4.1",
+      "type": "concept",
+      "label": "死锁的概念",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.4.1"
+    },
+    {
+      "id": "os_2.4.2",
+      "type": "concept",
+      "label": "死锁预防",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.4.2"
+    },
+    {
+      "id": "os_2.4.3",
+      "type": "concept",
+      "label": "死锁避免",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.4.3"
+    },
+    {
+      "id": "os_2.4.4",
+      "type": "concept",
+      "label": "死锁检测和解除",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.4.4"
+    },
+    {
+      "id": "os_2.4.5",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "2",
+      "chunk_id": "os_2.4.5"
+    },
+    {
+      "id": "os_3.1.1",
+      "type": "concept",
+      "label": "内存管理的基本原理和要求",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.1.1"
+    },
+    {
+      "id": "os_3.1.2",
+      "type": "concept",
+      "label": "连续分配管理方式",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.1.2"
+    },
+    {
+      "id": "os_3.1.3",
+      "type": "concept",
+      "label": "基本分页存储管理",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.1.3"
+    },
+    {
+      "id": "os_3.1.4",
+      "type": "concept",
+      "label": "基本分段存储管理",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.1.4"
+    },
+    {
+      "id": "os_3.1.5",
+      "type": "concept",
+      "label": "段页式存储管理",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.1.5"
+    },
+    {
+      "id": "os_3.1.6",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.1.6"
+    },
+    {
+      "id": "os_3.2.1",
+      "type": "concept",
+      "label": "虚拟内存的基本概念",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.1"
+    },
+    {
+      "id": "os_3.2.2",
+      "type": "concept",
+      "label": "请求分页管理方式",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.2"
+    },
+    {
+      "id": "os_3.2.3",
+      "type": "concept",
+      "label": "页框分配",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.3"
+    },
+    {
+      "id": "os_3.2.4",
+      "type": "algorithm",
+      "label": "页面置换算法",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.4"
+    },
+    {
+      "id": "os_3.2.6",
+      "type": "concept",
+      "label": "页框回收",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.6"
+    },
+    {
+      "id": "os_3.2.7",
+      "type": "concept",
+      "label": "内存映射文件",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.7"
+    },
+    {
+      "id": "os_3.2.8",
+      "type": "concept",
+      "label": "虚拟存储器性能影响因素",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.8"
+    },
+    {
+      "id": "os_3.2.9",
+      "type": "concept",
+      "label": "地址翻译",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.9"
+    },
+    {
+      "id": "os_3.2.10",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "3",
+      "chunk_id": "os_3.2.10"
+    },
+    {
+      "id": "os_4.1.1",
+      "type": "concept",
+      "label": "文件的基本概念",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.1"
+    },
+    {
+      "id": "os_4.1.2",
+      "type": "concept",
+      "label": "文件控制块和索引节点",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.2"
+    },
+    {
+      "id": "os_4.1.3",
+      "type": "concept",
+      "label": "文件的操作",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.3"
+    },
+    {
+      "id": "os_4.1.4",
+      "type": "concept",
+      "label": "文件的逻辑结构",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.4"
+    },
+    {
+      "id": "os_4.1.5",
+      "type": "concept",
+      "label": "文件的物理结构",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.5"
+    },
+    {
+      "id": "os_4.1.6",
+      "type": "concept",
+      "label": "文件保护",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.6"
+    },
+    {
+      "id": "os_4.1.7",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.1.7"
+    },
+    {
+      "id": "os_4.2.5",
+      "type": "concept",
+      "label": "文件共享",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.2.5"
+    },
+    {
+      "id": "os_4.2.6",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.2.6"
+    },
+    {
+      "id": "os_4.3.1",
+      "type": "concept",
+      "label": "文件系统结构",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.3.1"
+    },
+    {
+      "id": "os_4.3.2",
+      "type": "concept",
+      "label": "文件系统布局",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.3.2"
+    },
+    {
+      "id": "os_4.3.3",
+      "type": "concept",
+      "label": "文件存储空间管理",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.3.3"
+    },
+    {
+      "id": "os_4.3.4",
+      "type": "concept",
+      "label": "虚拟文件系统",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.3.4"
+    },
+    {
+      "id": "os_4.3.5",
+      "type": "concept",
+      "label": "文件系统挂载",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.3.5"
+    },
+    {
+      "id": "os_4.3.6",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "4",
+      "chunk_id": "os_4.3.6"
+    },
+    {
+      "id": "os_5.1.1",
+      "type": "concept",
+      "label": "I/O设备",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.1.1"
+    },
+    {
+      "id": "os_5.1.2",
+      "type": "concept",
+      "label": "I/O控制方式",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.1.2"
+    },
+    {
+      "id": "os_5.1.3",
+      "type": "concept",
+      "label": "I/O软件层次结构",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.1.3"
+    },
+    {
+      "id": "os_5.1.4",
+      "type": "concept",
+      "label": "应用程序I/O接口",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.1.4"
+    },
+    {
+      "id": "os_5.1.5",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.1.5"
+    },
+    {
+      "id": "os_5.2.1",
+      "type": "concept",
+      "label": "设备独立性软件",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.1"
+    },
+    {
+      "id": "os_5.2.2",
+      "type": "concept",
+      "label": "高速缓存与缓冲区",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.2"
+    },
+    {
+      "id": "os_5.2.3",
+      "type": "concept",
+      "label": "设备分配与回收",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.3"
+    },
+    {
+      "id": "os_5.2.4",
+      "type": "concept",
+      "label": "SPOOLing技术（假脱机技术）",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.4"
+    },
+    {
+      "id": "os_5.2.5",
+      "type": "concept",
+      "label": "设备驱动程序接口",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.5"
+    },
+    {
+      "id": "os_5.2.6",
+      "type": "concept",
+      "label": "I/O操作举例",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.6"
+    },
+    {
+      "id": "os_5.2.7",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.2.7"
+    },
+    {
+      "id": "os_5.3.1",
+      "type": "concept",
+      "label": "磁盘",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.3.1"
+    },
+    {
+      "id": "os_5.3.2",
+      "type": "concept",
+      "label": "磁盘的管理",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.3.2"
+    },
+    {
+      "id": "os_5.3.3",
+      "type": "algorithm",
+      "label": "磁盘调度算法",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.3.3"
+    },
+    {
+      "id": "os_5.3.4",
+      "type": "concept",
+      "label": "固态硬盘",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.3.4"
+    },
+    {
+      "id": "os_5.3.5",
+      "type": "concept",
+      "label": "本节小结",
+      "subject_code": "os",
+      "chapter": "5",
+      "chunk_id": "os_5.3.5"
+    }
+  ],
+  "edges": [
+    {
+      "source": "cn_1.1.1",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.1.2",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.1.3",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.1.4",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.1.5",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.1.6",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.2.1",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.2.2",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.2.3",
+      "target": "cn_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.1.1",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.1.2",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.1.3",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.2.1",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.2.2",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.3.1",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_2.3.2",
+      "target": "cn_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.1.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.1.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.1.5",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.2.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.2.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.2.3",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.3.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.3.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.4.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.4.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.5.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.5.2_0",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.5.3",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.6.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.6.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.6.3",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.6.4",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.7.1",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.7.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_3.8.2",
+      "target": "cn_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.1.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.1.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.1.3",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.1.4",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.1.5",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.3",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.4",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.5",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.6",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.2.7",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.3.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.3.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.3.3",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.3.4",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.4.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.4.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.4.3",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.4.4",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.4.5",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.5.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.5.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.5.3",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.5.4",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.6.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.6.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.7.1",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.7.2",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_4.7.3",
+      "target": "cn_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.1.1",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.1.2",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.1.3",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.2.1",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.2.2",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.3.1",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.3.2",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.3.3",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.3.4",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.3.5",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_5.3.6",
+      "target": "cn_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.1.1",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.1.2",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.2.1",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.2.2",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.2.3",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.3.1",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.3.2",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.4.1",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.4.2",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.4.3",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.5.1",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_6.5.2",
+      "target": "cn_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.2.1",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.2.2",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.2.3",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.2.4",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.2.5",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.3.1",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_1.3.2",
+      "target": "co_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.1.1",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.1.2",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.1.3",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.1.4",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.2.1",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.2.2",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.2.3",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.2.4",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.3.1",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.3.2",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.3.3",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_2.3.4",
+      "target": "co_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.1.1",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.1.2",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.1.3",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.2.1",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.2.2",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.2.3",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.2.4",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.3.1",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.3.2",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.3.3",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.3.4",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.4.1",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.4.2",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.5.1",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.5.2",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.5.3",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.5.4",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.5.5",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.6.1",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.6.2",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.6.3",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_3.6.4",
+      "target": "co_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.1.1",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.1.2",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.1.3",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.1.4",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.1.5",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.2.1",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.2.2",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.3.1_0",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.3.2",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.3.3",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.3.4",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.4.1",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_4.4.3",
+      "target": "co_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.1.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.1.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.1.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.2.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.2.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.2.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.3.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.3.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.3.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.3.4",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.4.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.4.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.4.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.5.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.5.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.5.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.6.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.6.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.6.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.6.4",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.6.5",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.7.1",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.7.2",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.7.3",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_5.7.4",
+      "target": "co_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_6.1.1",
+      "target": "co_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_6.1.2",
+      "target": "co_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_6.1.3",
+      "target": "co_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_6.1.5",
+      "target": "co_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_6.2.1",
+      "target": "co_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_6.2.2",
+      "target": "co_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_7.2.2",
+      "target": "co_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_7.2.3",
+      "target": "co_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_7.2.4",
+      "target": "co_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_7.3.1",
+      "target": "co_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_7.3.2",
+      "target": "co_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "co_7.3.3",
+      "target": "co_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_1.1.1",
+      "target": "ds_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_1.1.2",
+      "target": "ds_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_1.2.1",
+      "target": "ds_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_1.2.2",
+      "target": "ds_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.1.1",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.1.2",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.2.1",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.2.2",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.3.1",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.3.2",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.3.3",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.3.4",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.3.5",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_2.3.6",
+      "target": "ds_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.1.1",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.1.2",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.1.3",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.2.1",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.2.2",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.2.3",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.2.4",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.3.1",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.3.2",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.3.3",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.3.4",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.3.5",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.4.2",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.4.3",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_3.4.4",
+      "target": "ds_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_4.1.1",
+      "target": "ds_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_4.1.2",
+      "target": "ds_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_4.1.3",
+      "target": "ds_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_4.2.1",
+      "target": "ds_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_4.2.2",
+      "target": "ds_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_4.2.3",
+      "target": "ds_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.1.1",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.1.2",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.1.3",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.2.1",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.2.2",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.3.1",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.3.2",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.4.1",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.4.2",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.4.3",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.5.1",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_5.5.2",
+      "target": "ds_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.1.1",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.2.1",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.2.2",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.2.3",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.2.4",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.2.5",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.3.1",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.3.2",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.3.3",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.4.1",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.4.2",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.4.3",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.4.4",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_6.4.5",
+      "target": "ds_ch6",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.2.1",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.2.2",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.2.3",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.3.1",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.3.2",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.3.3",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.4.1",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.4.2",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.5.1",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.5.2",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.5.3",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_7.5.4",
+      "target": "ds_ch7",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.1.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.2.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.2.2",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.2.3",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.3.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.3.2",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.4.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.4.2",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.5.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.5.2",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.6.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.6.2",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.7.1",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.7.2",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.7.3",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.7.4",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "ds_8.7.5",
+      "target": "ds_ch8",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.1.1",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.1.2",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.1.3",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.2.1",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.2.2",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.2.3",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.2.4",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.2.6",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.3.1",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.3.2",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.3.3",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_1.6.1",
+      "target": "os_ch1",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.2",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.3",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.4",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.5",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.6",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.1.7",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.2",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.3",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.4",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.5_0",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.6",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.2.7",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.2",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.3",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.4",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.5_0",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.6",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.3.7",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.4.1",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.4.2",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.4.3",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.4.4",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_2.4.5",
+      "target": "os_ch2",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.1.1",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.1.2",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.1.3",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.1.4",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.1.5",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.1.6",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.4",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.6",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.7",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.8",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.9",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_3.2.10",
+      "target": "os_ch3",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.2",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.3",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.4",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.5",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.6",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.1.7",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.2.5",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.2.6",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.3.1",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.3.2",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.3.3",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.3.4",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.3.5",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_4.3.6",
+      "target": "os_ch4",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.1.1",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.1.2",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.1.3",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.1.4",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.1.5",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.2",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.3",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.4",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.5",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.6",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.2.7",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.3.1",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.3.2",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.3.3",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.3.4",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "os_5.3.5",
+      "target": "os_ch5",
+      "relation": "属于",
+      "weight": 1.0
+    },
+    {
+      "source": "cn_1.1.1",
+      "target": "cn_1.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.1",
+      "target": "cn_1.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.1",
+      "target": "cn_1.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.1",
+      "target": "cn_1.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.1",
+      "target": "cn_1.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.2",
+      "target": "cn_1.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.2",
+      "target": "cn_1.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.2",
+      "target": "cn_1.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.2",
+      "target": "cn_1.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.3",
+      "target": "cn_1.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.3",
+      "target": "cn_1.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.3",
+      "target": "cn_1.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.4",
+      "target": "cn_1.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.4",
+      "target": "cn_1.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.1.5",
+      "target": "cn_1.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.2.1",
+      "target": "cn_1.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.2.1",
+      "target": "cn_1.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_1.2.2",
+      "target": "cn_1.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_2.1.1",
+      "target": "cn_2.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_2.1.1",
+      "target": "cn_2.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_2.1.2",
+      "target": "cn_2.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_2.2.1",
+      "target": "cn_2.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_2.3.1",
+      "target": "cn_2.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.1.1",
+      "target": "cn_3.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.1.1",
+      "target": "cn_3.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.1.2",
+      "target": "cn_3.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.2.1",
+      "target": "cn_3.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.2.1",
+      "target": "cn_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.2.2",
+      "target": "cn_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.3.1",
+      "target": "cn_3.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.4.1",
+      "target": "cn_3.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.5.1",
+      "target": "cn_3.5.2_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.5.1",
+      "target": "cn_3.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.5.2_0",
+      "target": "cn_3.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.6.1",
+      "target": "cn_3.6.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.6.1",
+      "target": "cn_3.6.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.6.1",
+      "target": "cn_3.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.6.2",
+      "target": "cn_3.6.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.6.2",
+      "target": "cn_3.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.6.3",
+      "target": "cn_3.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_3.7.1",
+      "target": "cn_3.7.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.1",
+      "target": "cn_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.1",
+      "target": "cn_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.1",
+      "target": "cn_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.1",
+      "target": "cn_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.2",
+      "target": "cn_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.2",
+      "target": "cn_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.2",
+      "target": "cn_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.3",
+      "target": "cn_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.3",
+      "target": "cn_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.1.4",
+      "target": "cn_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_4.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_4.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_4.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_4.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_4.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.1",
+      "target": "cn_4.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.2",
+      "target": "cn_4.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.2",
+      "target": "cn_4.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.2",
+      "target": "cn_4.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.2",
+      "target": "cn_4.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.2",
+      "target": "cn_4.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.3",
+      "target": "cn_4.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.3",
+      "target": "cn_4.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.3",
+      "target": "cn_4.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.3",
+      "target": "cn_4.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.4",
+      "target": "cn_4.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.4",
+      "target": "cn_4.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.4",
+      "target": "cn_4.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.5",
+      "target": "cn_4.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.5",
+      "target": "cn_4.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.2.6",
+      "target": "cn_4.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.3.1",
+      "target": "cn_4.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.3.1",
+      "target": "cn_4.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.3.1",
+      "target": "cn_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.3.2",
+      "target": "cn_4.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.3.2",
+      "target": "cn_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.3.3",
+      "target": "cn_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.1",
+      "target": "cn_4.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.1",
+      "target": "cn_4.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.1",
+      "target": "cn_4.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.1",
+      "target": "cn_4.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.2",
+      "target": "cn_4.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.2",
+      "target": "cn_4.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.2",
+      "target": "cn_4.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.3",
+      "target": "cn_4.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.3",
+      "target": "cn_4.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.4.4",
+      "target": "cn_4.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.5.1",
+      "target": "cn_4.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.5.1",
+      "target": "cn_4.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.5.1",
+      "target": "cn_4.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.5.2",
+      "target": "cn_4.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.5.2",
+      "target": "cn_4.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.5.3",
+      "target": "cn_4.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.6.1",
+      "target": "cn_4.6.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.7.1",
+      "target": "cn_4.7.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.7.1",
+      "target": "cn_4.7.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_4.7.2",
+      "target": "cn_4.7.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.1.1",
+      "target": "cn_5.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.1.1",
+      "target": "cn_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.1.2",
+      "target": "cn_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.2.1",
+      "target": "cn_5.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.1",
+      "target": "cn_5.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.1",
+      "target": "cn_5.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.1",
+      "target": "cn_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.1",
+      "target": "cn_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.1",
+      "target": "cn_5.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.2",
+      "target": "cn_5.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.2",
+      "target": "cn_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.2",
+      "target": "cn_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.2",
+      "target": "cn_5.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.3",
+      "target": "cn_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.3",
+      "target": "cn_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.3",
+      "target": "cn_5.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.4",
+      "target": "cn_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.4",
+      "target": "cn_5.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_5.3.5",
+      "target": "cn_5.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.1.1",
+      "target": "cn_6.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.2.1",
+      "target": "cn_6.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.2.1",
+      "target": "cn_6.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.2.2",
+      "target": "cn_6.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.3.1",
+      "target": "cn_6.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.4.1",
+      "target": "cn_6.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.4.1",
+      "target": "cn_6.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.4.2",
+      "target": "cn_6.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "cn_6.5.1",
+      "target": "cn_6.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.1",
+      "target": "co_1.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.1",
+      "target": "co_1.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.1",
+      "target": "co_1.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.1",
+      "target": "co_1.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.2",
+      "target": "co_1.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.2",
+      "target": "co_1.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.2",
+      "target": "co_1.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.3",
+      "target": "co_1.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.3",
+      "target": "co_1.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.2.4",
+      "target": "co_1.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_1.3.1",
+      "target": "co_1.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.1.1",
+      "target": "co_2.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.1.1",
+      "target": "co_2.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.1.1",
+      "target": "co_2.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.1.2",
+      "target": "co_2.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.1.2",
+      "target": "co_2.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.1.3",
+      "target": "co_2.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.2.1",
+      "target": "co_2.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.2.1",
+      "target": "co_2.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.2.1",
+      "target": "co_2.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.2.2",
+      "target": "co_2.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.2.2",
+      "target": "co_2.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.2.3",
+      "target": "co_2.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.3.1",
+      "target": "co_2.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.3.1",
+      "target": "co_2.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.3.1",
+      "target": "co_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.3.2",
+      "target": "co_2.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.3.2",
+      "target": "co_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_2.3.3",
+      "target": "co_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.1.1",
+      "target": "co_3.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.1.1",
+      "target": "co_3.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.1.2",
+      "target": "co_3.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.2.1",
+      "target": "co_3.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.2.1",
+      "target": "co_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.2.1",
+      "target": "co_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.2.2",
+      "target": "co_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.2.2",
+      "target": "co_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.2.3",
+      "target": "co_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.3.1",
+      "target": "co_3.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.3.1",
+      "target": "co_3.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.3.1",
+      "target": "co_3.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.3.2",
+      "target": "co_3.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.3.2",
+      "target": "co_3.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.3.3",
+      "target": "co_3.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.4.1",
+      "target": "co_3.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.1",
+      "target": "co_3.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.1",
+      "target": "co_3.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.1",
+      "target": "co_3.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.1",
+      "target": "co_3.5.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.2",
+      "target": "co_3.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.2",
+      "target": "co_3.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.2",
+      "target": "co_3.5.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.3",
+      "target": "co_3.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.3",
+      "target": "co_3.5.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.5.4",
+      "target": "co_3.5.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.6.1",
+      "target": "co_3.6.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.6.1",
+      "target": "co_3.6.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.6.1",
+      "target": "co_3.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.6.2",
+      "target": "co_3.6.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.6.2",
+      "target": "co_3.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_3.6.3",
+      "target": "co_3.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.1",
+      "target": "co_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.1",
+      "target": "co_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.1",
+      "target": "co_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.1",
+      "target": "co_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.2",
+      "target": "co_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.2",
+      "target": "co_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.2",
+      "target": "co_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.3",
+      "target": "co_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.3",
+      "target": "co_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.1.4",
+      "target": "co_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.2.1",
+      "target": "co_4.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.3.1_0",
+      "target": "co_4.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.3.1_0",
+      "target": "co_4.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.3.1_0",
+      "target": "co_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.3.2",
+      "target": "co_4.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.3.2",
+      "target": "co_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.3.3",
+      "target": "co_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_4.4.1",
+      "target": "co_4.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.1.1",
+      "target": "co_5.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.1.1",
+      "target": "co_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.1.2",
+      "target": "co_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.2.1",
+      "target": "co_5.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.2.1",
+      "target": "co_5.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.2.2",
+      "target": "co_5.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.3.1",
+      "target": "co_5.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.3.1",
+      "target": "co_5.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.3.1",
+      "target": "co_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.3.2",
+      "target": "co_5.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.3.2",
+      "target": "co_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.3.3",
+      "target": "co_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.4.1",
+      "target": "co_5.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.4.1",
+      "target": "co_5.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.4.2",
+      "target": "co_5.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.5.1",
+      "target": "co_5.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.5.1",
+      "target": "co_5.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.5.2",
+      "target": "co_5.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.1",
+      "target": "co_5.6.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.1",
+      "target": "co_5.6.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.1",
+      "target": "co_5.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.1",
+      "target": "co_5.6.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.2",
+      "target": "co_5.6.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.2",
+      "target": "co_5.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.2",
+      "target": "co_5.6.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.3",
+      "target": "co_5.6.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.3",
+      "target": "co_5.6.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.6.4",
+      "target": "co_5.6.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.7.1",
+      "target": "co_5.7.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.7.1",
+      "target": "co_5.7.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.7.1",
+      "target": "co_5.7.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.7.2",
+      "target": "co_5.7.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.7.2",
+      "target": "co_5.7.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_5.7.3",
+      "target": "co_5.7.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.1.1",
+      "target": "co_6.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.1.1",
+      "target": "co_6.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.1.1",
+      "target": "co_6.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.1.2",
+      "target": "co_6.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.1.2",
+      "target": "co_6.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.1.3",
+      "target": "co_6.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_6.2.1",
+      "target": "co_6.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_7.2.2",
+      "target": "co_7.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_7.2.2",
+      "target": "co_7.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_7.2.3",
+      "target": "co_7.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_7.3.1",
+      "target": "co_7.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_7.3.1",
+      "target": "co_7.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "co_7.3.2",
+      "target": "co_7.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_1.1.1",
+      "target": "ds_1.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_1.2.1",
+      "target": "ds_1.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.1.1",
+      "target": "ds_2.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.2.1",
+      "target": "ds_2.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.1",
+      "target": "ds_2.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.1",
+      "target": "ds_2.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.1",
+      "target": "ds_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.1",
+      "target": "ds_2.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.1",
+      "target": "ds_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.2",
+      "target": "ds_2.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.2",
+      "target": "ds_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.2",
+      "target": "ds_2.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.2",
+      "target": "ds_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.3",
+      "target": "ds_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.3",
+      "target": "ds_2.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.3",
+      "target": "ds_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.4",
+      "target": "ds_2.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.4",
+      "target": "ds_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_2.3.5",
+      "target": "ds_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.1.1",
+      "target": "ds_3.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.1.1",
+      "target": "ds_3.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.1.2",
+      "target": "ds_3.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.2.1",
+      "target": "ds_3.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.2.1",
+      "target": "ds_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.2.1",
+      "target": "ds_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.2.2",
+      "target": "ds_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.2.2",
+      "target": "ds_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.2.3",
+      "target": "ds_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.1",
+      "target": "ds_3.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.1",
+      "target": "ds_3.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.1",
+      "target": "ds_3.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.1",
+      "target": "ds_3.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.2",
+      "target": "ds_3.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.2",
+      "target": "ds_3.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.2",
+      "target": "ds_3.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.3",
+      "target": "ds_3.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.3",
+      "target": "ds_3.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.3.4",
+      "target": "ds_3.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_3.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_3.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_3.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_4.1.1",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.1",
+      "target": "ds_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.2",
+      "target": "ds_3.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.2",
+      "target": "ds_3.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.2",
+      "target": "ds_4.1.1",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.2",
+      "target": "ds_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.2",
+      "target": "ds_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.3",
+      "target": "ds_3.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.3",
+      "target": "ds_4.1.1",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.3",
+      "target": "ds_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.3",
+      "target": "ds_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.4",
+      "target": "ds_4.1.1",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.4",
+      "target": "ds_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_3.4.4",
+      "target": "ds_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_4.1.1",
+      "target": "ds_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_4.1.1",
+      "target": "ds_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_4.1.2",
+      "target": "ds_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_4.2.1",
+      "target": "ds_4.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_4.2.1",
+      "target": "ds_4.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_4.2.2",
+      "target": "ds_4.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.1.1",
+      "target": "ds_5.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.1.1",
+      "target": "ds_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.1.2",
+      "target": "ds_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.2.1",
+      "target": "ds_5.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.3.1",
+      "target": "ds_5.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.4.1",
+      "target": "ds_5.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.4.1",
+      "target": "ds_5.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.4.2",
+      "target": "ds_5.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_5.5.1",
+      "target": "ds_5.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.1",
+      "target": "ds_6.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.1",
+      "target": "ds_6.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.1",
+      "target": "ds_6.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.1",
+      "target": "ds_6.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.2",
+      "target": "ds_6.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.2",
+      "target": "ds_6.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.2",
+      "target": "ds_6.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.3",
+      "target": "ds_6.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.3",
+      "target": "ds_6.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.2.4",
+      "target": "ds_6.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.3.1",
+      "target": "ds_6.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.3.1",
+      "target": "ds_6.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.3.2",
+      "target": "ds_6.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.1",
+      "target": "ds_6.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.1",
+      "target": "ds_6.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.1",
+      "target": "ds_6.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.1",
+      "target": "ds_6.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.2",
+      "target": "ds_6.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.2",
+      "target": "ds_6.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.2",
+      "target": "ds_6.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.3",
+      "target": "ds_6.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.3",
+      "target": "ds_6.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_6.4.4",
+      "target": "ds_6.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.2.1",
+      "target": "ds_7.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.2.1",
+      "target": "ds_7.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.2.2",
+      "target": "ds_7.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.3.1",
+      "target": "ds_7.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.3.1",
+      "target": "ds_7.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.3.2",
+      "target": "ds_7.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.4.1",
+      "target": "ds_7.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.5.1",
+      "target": "ds_7.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.5.1",
+      "target": "ds_7.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.5.1",
+      "target": "ds_7.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.5.2",
+      "target": "ds_7.5.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.5.2",
+      "target": "ds_7.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_7.5.3",
+      "target": "ds_7.5.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.2.1",
+      "target": "ds_8.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.2.1",
+      "target": "ds_8.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.2.2",
+      "target": "ds_8.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.3.1",
+      "target": "ds_8.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.4.1",
+      "target": "ds_8.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.5.1",
+      "target": "ds_8.5.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.6.1",
+      "target": "ds_8.6.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.1",
+      "target": "ds_8.7.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.1",
+      "target": "ds_8.7.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.1",
+      "target": "ds_8.7.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.1",
+      "target": "ds_8.7.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.2",
+      "target": "ds_8.7.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.2",
+      "target": "ds_8.7.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.2",
+      "target": "ds_8.7.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.3",
+      "target": "ds_8.7.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.3",
+      "target": "ds_8.7.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "ds_8.7.4",
+      "target": "ds_8.7.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.1.1",
+      "target": "os_1.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.1.1",
+      "target": "os_1.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.1.2",
+      "target": "os_1.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.1",
+      "target": "os_1.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.1",
+      "target": "os_1.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.1",
+      "target": "os_1.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.1",
+      "target": "os_1.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.2",
+      "target": "os_1.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.2",
+      "target": "os_1.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.2",
+      "target": "os_1.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.3",
+      "target": "os_1.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.3",
+      "target": "os_1.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.2.4",
+      "target": "os_1.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.3.1",
+      "target": "os_1.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.3.1",
+      "target": "os_1.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_1.3.2",
+      "target": "os_1.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_2.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_2.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_2.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_2.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_2.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.1",
+      "target": "os_2.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.2",
+      "target": "os_2.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.2",
+      "target": "os_2.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.2",
+      "target": "os_2.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.2",
+      "target": "os_2.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.2",
+      "target": "os_2.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.3",
+      "target": "os_2.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.3",
+      "target": "os_2.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.3",
+      "target": "os_2.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.3",
+      "target": "os_2.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.4",
+      "target": "os_2.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.4",
+      "target": "os_2.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.4",
+      "target": "os_2.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.5",
+      "target": "os_2.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.5",
+      "target": "os_2.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.1.6",
+      "target": "os_2.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_2.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_2.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_2.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_2.2.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_2.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.1",
+      "target": "os_2.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.2",
+      "target": "os_2.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.2",
+      "target": "os_2.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.2",
+      "target": "os_2.2.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.2",
+      "target": "os_2.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.2",
+      "target": "os_2.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.3",
+      "target": "os_2.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.3",
+      "target": "os_2.2.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.3",
+      "target": "os_2.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.3",
+      "target": "os_2.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.4",
+      "target": "os_2.2.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.4",
+      "target": "os_2.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.4",
+      "target": "os_2.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.5_0",
+      "target": "os_2.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.5_0",
+      "target": "os_2.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.2.6",
+      "target": "os_2.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_2.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_2.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_2.3.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.1",
+      "target": "os_2.3.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.2",
+      "target": "os_2.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.2",
+      "target": "os_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.2",
+      "target": "os_2.3.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.2",
+      "target": "os_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.2",
+      "target": "os_2.3.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.3",
+      "target": "os_2.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.3",
+      "target": "os_2.3.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.3",
+      "target": "os_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.3",
+      "target": "os_2.3.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.4",
+      "target": "os_2.3.5_0",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.4",
+      "target": "os_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.4",
+      "target": "os_2.3.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.5_0",
+      "target": "os_2.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.5_0",
+      "target": "os_2.3.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.3.6",
+      "target": "os_2.3.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.1",
+      "target": "os_2.4.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.1",
+      "target": "os_2.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.1",
+      "target": "os_2.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.1",
+      "target": "os_2.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.2",
+      "target": "os_2.4.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.2",
+      "target": "os_2.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.2",
+      "target": "os_2.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.3",
+      "target": "os_2.4.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.3",
+      "target": "os_2.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_2.4.4",
+      "target": "os_2.4.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.1",
+      "target": "os_3.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.1",
+      "target": "os_3.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.1",
+      "target": "os_3.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.1",
+      "target": "os_3.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.1",
+      "target": "os_3.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.2",
+      "target": "os_3.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.2",
+      "target": "os_3.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.2",
+      "target": "os_3.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.2",
+      "target": "os_3.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.3",
+      "target": "os_3.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.3",
+      "target": "os_3.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.3",
+      "target": "os_3.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.4",
+      "target": "os_3.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.4",
+      "target": "os_3.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.1.5",
+      "target": "os_3.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.8",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.1",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.8",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.2",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_3.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_3.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_3.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_3.2.8",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.3",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.4",
+      "target": "os_3.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.4",
+      "target": "os_3.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.4",
+      "target": "os_3.2.8",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.4",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.4",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.6",
+      "target": "os_3.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.6",
+      "target": "os_3.2.8",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.6",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.6",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.7",
+      "target": "os_3.2.8",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.7",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.7",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.8",
+      "target": "os_3.2.9",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.8",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_3.2.9",
+      "target": "os_3.2.10",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_4.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_4.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.1",
+      "target": "os_4.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.2",
+      "target": "os_4.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.2",
+      "target": "os_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.2",
+      "target": "os_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.2",
+      "target": "os_4.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.2",
+      "target": "os_4.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.3",
+      "target": "os_4.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.3",
+      "target": "os_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.3",
+      "target": "os_4.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.3",
+      "target": "os_4.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.4",
+      "target": "os_4.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.4",
+      "target": "os_4.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.4",
+      "target": "os_4.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.5",
+      "target": "os_4.1.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.5",
+      "target": "os_4.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.1.6",
+      "target": "os_4.1.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.2.5",
+      "target": "os_4.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.1",
+      "target": "os_4.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.1",
+      "target": "os_4.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.1",
+      "target": "os_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.1",
+      "target": "os_4.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.1",
+      "target": "os_4.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.2",
+      "target": "os_4.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.2",
+      "target": "os_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.2",
+      "target": "os_4.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.2",
+      "target": "os_4.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.3",
+      "target": "os_4.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.3",
+      "target": "os_4.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.3",
+      "target": "os_4.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.4",
+      "target": "os_4.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.4",
+      "target": "os_4.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_4.3.5",
+      "target": "os_4.3.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.1",
+      "target": "os_5.1.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.1",
+      "target": "os_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.1",
+      "target": "os_5.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.1",
+      "target": "os_5.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.2",
+      "target": "os_5.1.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.2",
+      "target": "os_5.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.2",
+      "target": "os_5.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.3",
+      "target": "os_5.1.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.3",
+      "target": "os_5.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.1.4",
+      "target": "os_5.1.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_5.2.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_5.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_5.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_5.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_5.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.1",
+      "target": "os_5.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.2",
+      "target": "os_5.2.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.2",
+      "target": "os_5.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.2",
+      "target": "os_5.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.2",
+      "target": "os_5.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.2",
+      "target": "os_5.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.3",
+      "target": "os_5.2.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.3",
+      "target": "os_5.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.3",
+      "target": "os_5.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.3",
+      "target": "os_5.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.4",
+      "target": "os_5.2.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.4",
+      "target": "os_5.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.4",
+      "target": "os_5.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.5",
+      "target": "os_5.2.6",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.5",
+      "target": "os_5.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.2.6",
+      "target": "os_5.2.7",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.1",
+      "target": "os_5.3.2",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.1",
+      "target": "os_5.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.1",
+      "target": "os_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.1",
+      "target": "os_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.2",
+      "target": "os_5.3.3",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.2",
+      "target": "os_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.2",
+      "target": "os_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.3",
+      "target": "os_5.3.4",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.3",
+      "target": "os_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    },
+    {
+      "source": "os_5.3.4",
+      "target": "os_5.3.5",
+      "relation": "相关",
+      "weight": 0.6
+    }
+  ]
+}

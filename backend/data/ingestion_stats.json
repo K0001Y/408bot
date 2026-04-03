@@ -1,0 +1,36 @@
+{
+  "total_loaded": 622,
+  "total_filtered": 130,
+  "total_valid": 492,
+  "per_subject": {
+    "cn": {
+      "loaded": 155,
+      "valid": 129,
+      "filtered": 26
+    },
+    "co": {
+      "loaded": 161,
+      "valid": 126,
+      "filtered": 35
+    },
+    "ds": {
+      "loaded": 177,
+      "valid": 135,
+      "filtered": 42
+    },
+    "os": {
+      "loaded": 129,
+      "valid": 102,
+      "filtered": 27
+    }
+  },
+  "content_type_corrections": 455,
+  "content_type_distribution": {
+    "concept": 306,
+    "exercise": 68,
+    "answer": 98,
+    "code": 16,
+    "summary": 4
+  },
+  "total_elapsed_seconds": 183.57
+}

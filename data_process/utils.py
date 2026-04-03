@@ -5,7 +5,7 @@
 import re
 from typing import List, Dict, Optional, Tuple
 
-from config import CHINESE_NUMBERS, CODE_PATTERNS, CODE_LINE_PATTERNS, CONTENT_TYPE_PATTERNS
+from .config import CHINESE_NUMBERS, CODE_PATTERNS, CODE_LINE_PATTERNS, CONTENT_TYPE_PATTERNS
 
 
 # ============ 书签解析工具 ============

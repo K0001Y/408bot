@@ -1,0 +1,21 @@
+[project]
+name = "408-robot"
+version = "0.1.0"
+description = "408 考研教材 RAG 知识库构建系统"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "paddlepaddle>=3.0",
+    "paddleocr>=3.0",
+    "pillow>=11.0",
+    "pymupdf>=1.26.0",
+    "pypdf>=6.0",
+    "tqdm>=4.60.0",
+]
+
+[project.scripts]
+process-pdf = "data_process.pdf_processor:main"
+
+[tool.uv]
+python-downloads = "automatic"

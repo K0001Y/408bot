@@ -1,0 +1,50 @@
+# 408 考研辅助 Agent 配置
+app:
+  name: "408考研辅助Agent"
+  version: "0.1.0"
+  debug: true
+  cors_origins:
+    - "http://localhost:5173"
+    - "http://localhost:3000"
+
+# LLM 配置
+llm:
+  provider: "ollama"  # 可选: openai, ollama
+  openai:
+    model: "gpt-4"
+    api_key: ${OPENAI_API_KEY}
+    temperature: 0
+  ollama:
+    model: "deepseek-r1:8b"
+    base_url: "http://localhost:11434"
+    temperature: 0
+
+# Embedding 配置
+embedding:
+  model_name: "BAAI/bge-large-zh-v1.5"
+  device: "auto"  # auto, cpu, cuda, mps
+
+# 向量数据库配置
+vector_db:
+  persist_directory: "./data/vector_db"
+  collection_name: "408_knowledge"
+
+# 知识图谱配置
+graph:
+  graph_json_path: "./data/graph/knowledge_graph.json"
+  max_depth: 2
+
+# 错题本配置
+mistakes:
+  db_path: "./data/mistakes.db"
+
+# 数据源配置
+data:
+  chunks_dir: "../processed"
+
+# 日志配置
+logging:
+  level: "INFO"        # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "./logs/app.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 7

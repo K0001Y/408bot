@@ -26,7 +26,6 @@ CONFIG = {
     'ocr_lang': 'ch',
     'use_gpu': False,
     'min_confidence': 0.8,
-    'show_log': False,
     
     # Chunk 切分参数
     'max_chunk_tokens': 3000,

@@ -13,12 +13,12 @@ from typing import List, Dict, Optional, Tuple
 from tqdm import tqdm
 
 # 导入配置和工具函数
-from config import (
+from .config import (
     CONFIG, SUBJECTS, PDF_FILES,
     ensure_directories, get_pdf_path, get_output_path,
     OUTPUT_DIR
 )
-from utils import (
+from .utils import (
     extract_chapter_number, extract_chapter_title,
     extract_section_number, extract_section_title,
     extract_subsection_number, extract_subsection_title,
@@ -46,10 +46,7 @@ class PDFProcessor:
         try:
             from paddleocr import PaddleOCR
             self.ocr = PaddleOCR(
-                use_angle_cls=True,
-                lang=CONFIG['ocr_lang'],
-                use_gpu=CONFIG['use_gpu'],
-                show_log=CONFIG['show_log']
+                lang=CONFIG['ocr_lang']
             )
             print("✓ OCR 引擎初始化成功")
         except ImportError:
@@ -135,12 +132,24 @@ class PDFProcessor:
         current_chapter = None
         current_section = None
         
-        def parse_outline(items, level=0):
+        # 先统计总数用于进度条
+        def count_items(items):
+            count = 0
+            for item in items:
+                if isinstance(item, list):
+                    count += count_items(item)
+                else:
+                    count += 1
+            return count
+        
+        total_items = count_items(outlines)
+        
+        def parse_outline(items, level=0, pbar=None):
             nonlocal current_chapter, current_section
             
             for item in items:
                 if isinstance(item, list):
-                    parse_outline(item, level + 1)
+                    parse_outline(item, level + 1, pbar)
                 else:
                     try:
                         page_num = reader.get_destination_page_number(item) + 1
@@ -174,8 +183,13 @@ class PDFProcessor:
                         
                     except Exception as e:
                         print(f"  警告: 解析书签失败 - {e}")
+                    finally:
+                        if pbar:
+                            pbar.update(1)
         
-        parse_outline(outlines)
+        with tqdm(total=total_items, desc="  提取书签", unit="个") as pbar:
+            parse_outline(outlines, pbar=pbar)
+        
         return bookmarks
     
     def _pdf_to_images(self, pdf_path: Path) -> List:
@@ -188,14 +202,26 @@ class PDFProcessor:
         Returns:
             List: PIL Image 对象列表
         """
-        from pdf2image import convert_from_path
+        import fitz  # PyMuPDF
+        from PIL import Image
+        import io
         
-        images = convert_from_path(
-            str(pdf_path),
-            dpi=CONFIG['dpi'],
-            fmt=CONFIG['fmt'],
-            thread_count=CONFIG['thread_count']
-        )
+        doc = fitz.open(str(pdf_path))
+        images = []
+        total_pages = len(doc)
+        
+        for page_num in tqdm(range(total_pages), desc="  PDF转图片", total=total_pages, unit="页"):
+            page = doc[page_num]
+            # 设置缩放比例以达到目标 DPI
+            mat = fitz.Matrix(CONFIG['dpi']/72, CONFIG['dpi']/72)
+            pix = page.get_pixmap(matrix=mat)
+            
+            # 转换为 PIL Image
+            img_data = pix.tobytes("png")
+            img = Image.open(io.BytesIO(img_data))
+            images.append(img)
+        
+        doc.close()
         return images
     
     def _process_pages(self, images: List, subject_code: str) -> List[str]:
@@ -209,7 +235,7 @@ class PDFProcessor:
         Returns:
             List[str]: 每页的清洗后文本
         """
-        from config import TEMP_DIR
+        from .config import TEMP_DIR
         
         pages_text = []
         
@@ -262,11 +288,12 @@ class PDFProcessor:
         Returns:
             str: 识别的文字内容
         """
-        result = self.ocr.ocr(image_path, cls=True)
+        result = self.ocr.ocr(image_path)
         texts = []
-        if result[0]:
+        if result and len(result) > 0 and result[0]:
             for line in result[0]:
-                text, confidence = line[1][0], line[1][1]
+                text = line[1][0]
+                confidence = line[1][1]
                 if confidence >= CONFIG['min_confidence']:
                     texts.append(text)
         return "\n".join(texts)
@@ -285,7 +312,7 @@ class PDFProcessor:
         chunks = []
         subsection_bms = [bm for bm in bookmarks if bm['level'] == 2]
         
-        for i, bm in enumerate(subsection_bms):
+        for i, bm in enumerate(tqdm(subsection_bms, desc="  合并页面", unit="个")):
             start_page = bm['page']
             if i + 1 < len(subsection_bms):
                 end_page = subsection_bms[i + 1]['page'] - 1
@@ -329,7 +356,7 @@ class PDFProcessor:
         result = []
         pending_small = None
         
-        for chunk in chunks:
+        for chunk in tqdm(chunks, desc="  智能切分", unit="个"):
             tokens = estimate_tokens(chunk['content'])
             
             # 处理过小 chunk：暂存，尝试与下一个合并
@@ -339,7 +366,11 @@ class PDFProcessor:
                     pending_small['content'] += '\n\n' + chunk['content']
                     pending_small['char_count'] = len(pending_small['content'])
                     pending_small['page_end'] = chunk['page_end']
-                    pending_small['subsection'] += f",{chunk['subsection']}"
+                    # 处理 subsection 可能为 None 的情况
+                    if pending_small['subsection'] and chunk['subsection']:
+                        pending_small['subsection'] += f",{chunk['subsection']}"
+                    elif chunk['subsection']:
+                        pending_small['subsection'] = chunk['subsection']
                 else:
                     pending_small = chunk.copy()
                 continue
@@ -456,13 +487,24 @@ def main():
     processor = PDFProcessor()
     
     all_stats = []
-    for filename, subject in PDF_FILES:
+    # 只处理后两本：计算机组成原理和计算机网络
+    remaining_pdfs = [
+        ('2026计算机组成原理_带书签【公众号：研料库，料最全】.pdf', '计算机组成原理'),
+        ('2026计算机网络_带书签【公众号：研料库，料最全】.pdf', '计算机网络'),
+    ]
+    existing_pdfs = [(f, s) for f, s in remaining_pdfs if get_pdf_path(f).exists()]
+    
+    if not existing_pdfs:
+        print("警告: 没有找到任何PDF文件!")
+        return
+    
+    print(f"\n准备处理 {len(existing_pdfs)} 个PDF文件...")
+    print("="*60)
+    
+    for filename, subject in tqdm(existing_pdfs, desc="总体进度", unit="个"):
         pdf_path = get_pdf_path(filename)
-        if pdf_path.exists():
-            _, stats = processor.process_pdf(pdf_path, subject)
-            all_stats.append(stats)
-        else:
-            print(f"文件不存在: {pdf_path}")
+        _, stats = processor.process_pdf(pdf_path, subject)
+        all_stats.append(stats)
     
     # 保存汇总统计
     summary_file = OUTPUT_DIR / 'processing_summary.json'
