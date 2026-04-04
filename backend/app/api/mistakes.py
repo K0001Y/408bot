@@ -27,6 +27,7 @@ from app.utils.dependencies import get_app_state, AppState
 from app.utils.exceptions import (
     InputFormatError, QuestionNotFoundError,
 )
+from app.utils.question_parser import extract_question_by_number, extract_answer_by_number
 
 logger = get_logger("api.mistakes")
 
@@ -123,23 +124,26 @@ async def add_mistakes(req: MistakeCreate, request: Request):
             try:
                 q_skill = state.skills.get("question_location")
                 if q_skill:
-                    # 搜索与该题目相关的内容
-                    search_query = f"第{chapter}章 第{q_num}题"
-                    result = q_skill.execute({
-                        "subject": req.subject_code,
-                        "chapter": chapter.split(".")[0],  # 取主章节号
-                        "query": search_query,
-                        "top_k": 3,
-                        "include_answers": True,
-                    })
+                    # 按节精确检索，避免语义搜索带来的误匹配
+                    section_result = q_skill.find_by_section(
+                        subject=req.subject_code,
+                        section_number=chapter,
+                    )
 
-                    exercises = result.get("exercises", [])
-                    answers = result.get("answers", [])
+                    exercises = section_result.get("exercises", [])
+                    answers = section_result.get("answers", [])
 
-                    if exercises:
-                        question_text = exercises[0].get("content", "")[:500]
-                    if answers:
-                        answer_text = answers[0].get("content", "")[:500]
+                    # 从整个小节 chunk 中按题号提取单道题
+                    for ex in exercises:
+                        text = extract_question_by_number(ex.get("content", ""), q_num)
+                        if text:
+                            question_text = text
+                            break
+                    for ans in answers:
+                        text = extract_answer_by_number(ans.get("content", ""), q_num)
+                        if text:
+                            answer_text = text
+                            break
             except Exception as e:
                 logger.warning(
                     "题目内容检索失败 q=%d error=%s", q_num, str(e),

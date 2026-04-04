@@ -15,6 +15,7 @@ from app.utils.embeddings import encode_query
 
 # 习题相关的 subsection_title 关键词（兜底匹配）
 EXERCISE_KEYWORDS = ["习题精选", "本节试题", "练习", "习题", "思考题", "自测题"]
+ANSWER_KEYWORDS = ["答案与解析", "参考答案", "答案", "解析"]
 
 
 class QuestionLocationSkill(BaseSkill):
@@ -30,6 +31,78 @@ class QuestionLocationSkill(BaseSkill):
         super().__init__()
         self.collection = collection
         self.embedding_model = embedding_model
+
+    def find_by_section(self, subject: str, section_number: str) -> dict:
+        """
+        按 section_number 精确查找习题和答案 chunk。
+
+        不依赖 content_type 元数据（可能误分类），而是通过
+        subsection_title 关键词后过滤来区分习题/答案。
+
+        Args:
+            subject: 科目代码 (ds/os/co/cn)
+            section_number: 节号 (如 "3.4")
+
+        Returns:
+            {"exercises": [chunk_dict, ...], "answers": [chunk_dict, ...]}
+        """
+        where = {"$and": [
+            {"subject_code": {"$eq": subject}},
+            {"section_number": {"$eq": section_number}},
+        ]}
+
+        try:
+            results = self.collection.get(
+                where=where,
+                limit=50,
+                include=["documents", "metadatas"],
+            )
+        except Exception as e:
+            self.logger.error(
+                "find_by_section 查询失败 subject=%s section=%s error=%s",
+                subject, section_number, str(e), exc_info=True,
+            )
+            raise VectorSearchError(
+                message="按节检索习题失败",
+                detail=f"subject={subject}, section={section_number}, error={str(e)}",
+            )
+
+        exercises = []
+        answers = []
+
+        if results["ids"]:
+            for i, doc_id in enumerate(results["ids"]):
+                meta = results["metadatas"][i] if results.get("metadatas") else {}
+                doc = results["documents"][i] if results.get("documents") else ""
+                content = self._strip_context_header(doc)
+                title = meta.get("subsection_title", "")
+
+                item = {
+                    "chunk_id": meta.get("chunk_id", doc_id),
+                    "subsection": meta.get("subsection", ""),
+                    "subsection_title": title,
+                    "subject_code": meta.get("subject_code", ""),
+                    "chapter_number": meta.get("chapter_number", ""),
+                    "content_type": meta.get("content_type", ""),
+                    "content": content,
+                }
+
+                # 根据 subsection_title 关键词分类（优先于 content_type 元数据）
+                if any(kw in title for kw in ANSWER_KEYWORDS):
+                    answers.append(item)
+                elif any(kw in title for kw in EXERCISE_KEYWORDS):
+                    exercises.append(item)
+                elif meta.get("content_type") == "exercise":
+                    exercises.append(item)
+                elif meta.get("content_type") == "answer":
+                    answers.append(item)
+
+        self.logger.info(
+            "find_by_section 完成 subject=%s section=%s exercises=%d answers=%d",
+            subject, section_number, len(exercises), len(answers),
+        )
+
+        return {"exercises": exercises, "answers": answers}
 
     def _execute_impl(self, params: dict) -> dict:
         """

@@ -45,7 +45,7 @@ SUBJECT_NAMES = {
 CONTENT_TYPE_RULES = [
     # (subsection_title 关键词列表, 修正后的 content_type)
     (["本节小结", "本章小结", "总结", "本章总结"], "summary"),
-    (["习题精选", "本节习题", "练习题", "习题"], "exercise"),
+    (["习题精选", "试题精选", "本节习题", "本节试题", "练习题", "习题", "试题"], "exercise"),
     (["答案与解析", "参考答案", "答案", "解析"], "answer"),
 ]
 
