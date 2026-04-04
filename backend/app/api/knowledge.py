@@ -84,6 +84,9 @@ async def ask_question(req: AskRequest, request: Request):
     return AskResponse(
         answer=result.get("answer", ""),
         sources=sources,
+        thinking=result.get("thinking"),
+        intermediate_steps=result.get("intermediate_steps", []),
+        is_agentic=result.get("is_agentic", False),
     )
 
 

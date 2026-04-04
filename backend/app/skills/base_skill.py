@@ -4,6 +4,7 @@ Skill 基类
 所有 Skills 继承此基类，提供统一的接口和日志/错误处理模式。
 """
 
+import re
 import time
 from abc import ABC, abstractmethod
 from typing import Any
@@ -93,3 +94,20 @@ class BaseSkill(ABC):
                     items.append(f"{k}={sv}")
             return "{" + ", ".join(items) + "}"
         return str(result)[:200]
+
+    @staticmethod
+    def extract_thinking(text: str) -> tuple[str, str]:
+        """
+        从 LLM 原始输出中提取 <think>...</think> 块。
+
+        Returns:
+            (thinking_content, answer_text)
+            若无 <think> 块，thinking_content 为空字符串。
+        """
+        pattern = r"<think>(.*?)</think>"
+        match = re.search(pattern, text, re.DOTALL)
+        if match:
+            thinking = match.group(1).strip()
+            answer = re.sub(pattern, "", text, flags=re.DOTALL).strip()
+            return thinking, answer
+        return "", text

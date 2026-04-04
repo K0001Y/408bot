@@ -61,3 +61,6 @@ class AskResponse(BaseModel):
     """RAG 问答响应"""
     answer: str
     sources: list[SearchResult] = []
+    thinking: str | None = None
+    intermediate_steps: list[dict] = []
+    is_agentic: bool = False

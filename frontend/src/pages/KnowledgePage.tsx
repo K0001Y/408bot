@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, Send, Loader2, Terminal } from "lucide-react";
+import { Search, Send, Loader2, Terminal, ChevronRight, Cpu, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +14,9 @@ interface Message {
   role: "user" | "assistant";
   content: string;
   sources?: SearchResult[];
+  thinking?: string;
+  intermediate_steps?: Array<{ tool: string; output: string }>;
+  is_agentic?: boolean;
 }
 
 const EXAMPLE_QUESTIONS = [
@@ -29,6 +32,7 @@ export function KnowledgePage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [mode, setMode] = useState<"search" | "chat">("chat");
+  const [expandedThinking, setExpandedThinking] = useState<Set<string>>(new Set());
   const { loading, run } = useLoading();
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -61,8 +65,20 @@ export function KnowledgePage() {
       role: "assistant",
       content: result?.answer ?? "抱歉，暂时无法回答该问题。请检查后端服务是否正常运行。",
       sources: result?.sources,
+      thinking: result?.thinking,
+      intermediate_steps: result?.intermediate_steps,
+      is_agentic: result?.is_agentic,
     };
     setMessages((prev) => [...prev, assistantMsg]);
+  };
+
+  const toggleThinking = (id: string) => {
+    setExpandedThinking((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -168,6 +184,52 @@ export function KnowledgePage() {
                       : "border border-border bg-card text-foreground border-l-2 border-l-primary/40"
                   )}
                 >
+                  {/* Thinking / Agentic Trace Block */}
+                  {msg.role === "assistant" && (msg.thinking || (msg.intermediate_steps && msg.intermediate_steps.length > 0)) && (
+                    <div className="mb-3 border border-primary/20 bg-background/40">
+                      <button
+                        onClick={() => toggleThinking(msg.id)}
+                        className="flex w-full items-center gap-2 px-3 py-2 font-mono-tech text-[9px] tracking-widest text-primary/70 hover:text-primary hover:bg-primary/5 transition-smooth"
+                      >
+                        <ChevronRight
+                          className={cn(
+                            "h-3 w-3 shrink-0 transition-transform duration-200",
+                            expandedThinking.has(msg.id) && "rotate-90"
+                          )}
+                        />
+                        {msg.is_agentic ? (
+                          <><Cpu className="h-3 w-3" /><span>AGENTIC TRACE</span></>
+                        ) : (
+                          <><Cpu className="h-3 w-3" /><span>THINKING PROCESS</span></>
+                        )}
+                        <span className="ml-auto opacity-60">
+                          {msg.intermediate_steps ? `${msg.intermediate_steps.length} steps` : "1 step"}
+                        </span>
+                      </button>
+                      {expandedThinking.has(msg.id) && (
+                        <div className="border-t border-primary/10 px-3 py-2 space-y-2">
+                          {msg.thinking && (
+                            <div className="font-mono-tech text-[10px] leading-relaxed text-muted-foreground whitespace-pre-wrap">
+                              {msg.thinking}
+                            </div>
+                          )}
+                          {msg.intermediate_steps && msg.intermediate_steps.length > 0 && (
+                            <div className="space-y-1">
+                              {msg.intermediate_steps.map((step, idx) => (
+                                <div key={idx} className="flex items-start gap-2 text-[10px]">
+                                  <Wrench className="h-3 w-3 shrink-0 mt-0.5 text-primary/50" />
+                                  <div>
+                                    <span className="font-mono-tech text-primary/70">{step.tool}</span>
+                                    <p className="text-muted-foreground line-clamp-2">{step.output}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
                   <div className="whitespace-pre-wrap">{msg.content}</div>
                   {msg.sources && msg.sources.length > 0 && (
                     <div className="mt-3 border-t border-white/10 pt-2">

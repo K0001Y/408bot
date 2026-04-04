@@ -92,11 +92,11 @@ class AgenticRAGSkill(BaseSkill):
             params: {"query": str, "subject": str|None}
 
         Returns:
-            {"answer": str, "sources": [], "intermediate_steps": [...]}
+            {"answer": str, "sources": [], "intermediate_steps": [...], "thinking": str|None, "is_agentic": bool}
         """
         query = params.get("query", "")
         if not query:
-            return {"answer": "请输入问题", "sources": [], "intermediate_steps": []}
+            return {"answer": "请输入问题", "sources": [], "intermediate_steps": [], "thinking": None, "is_agentic": True}
 
         try:
             result = self.agent.invoke(
@@ -108,27 +108,36 @@ class AgenticRAGSkill(BaseSkill):
             messages = result.get("messages", [])
             answer = ""
             steps = []
+            thinking_parts = []
 
             for msg in messages:
                 msg_type = getattr(msg, "type", "")
-                if msg_type == "ai" and not getattr(msg, "tool_calls", None):
-                    # 最终的 AI 回复（没有 tool_calls）
-                    answer = getattr(msg, "content", "")
+                if msg_type == "ai":
+                    content = getattr(msg, "content", "") or ""
+                    think, clean = self.extract_thinking(content)
+                    if think:
+                        thinking_parts.append(think)
+                    if not getattr(msg, "tool_calls", None):
+                        answer = clean or content
                 elif msg_type == "tool":
                     steps.append({
                         "tool": getattr(msg, "name", "unknown"),
-                        "output": str(getattr(msg, "content", ""))[:200],
+                        "output": str(getattr(msg, "content", ""))[:300],
                     })
 
             if not answer and messages:
                 # Fallback: 取最后一条消息
                 last = messages[-1]
-                answer = getattr(last, "content", str(last))
+                _, answer = self.extract_thinking(getattr(last, "content", str(last)))
+
+            combined_thinking = "\n\n---\n\n".join(thinking_parts) if thinking_parts else None
 
             return {
                 "answer": answer,
                 "sources": [],
                 "intermediate_steps": steps,
+                "thinking": combined_thinking,
+                "is_agentic": True,
             }
         except Exception as e:
             self.logger.error("Agentic RAG 失败 error=%s", str(e), exc_info=True)

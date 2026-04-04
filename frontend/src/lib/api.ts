@@ -77,7 +77,7 @@ export const api = {
   getChunk: (id: string) => request<ChunkDetail>(`/knowledge/chunk/${id}`),
 
   askQuestion: (params: { query: string; subject?: string }) =>
-    request<{ answer: string; sources: SearchResult[] }>("/knowledge/ask", {
+    request<AskResponse>("/knowledge/ask", {
       method: "POST",
       body: JSON.stringify(params),
       timeout: LLM_TIMEOUT,
@@ -231,6 +231,14 @@ export interface QuizResult {
   count: number;
   difficulty: string;
   sources: SearchResult[];
+}
+
+export interface AskResponse {
+  answer: string;
+  sources: SearchResult[];
+  thinking?: string;
+  intermediate_steps?: Array<{ tool: string; output: string }>;
+  is_agentic?: boolean;
 }
 
 export interface MistakeItem {
