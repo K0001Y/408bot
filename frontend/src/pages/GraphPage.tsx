@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Search, Loader2, Maximize2, ZoomIn, ZoomOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import { SubjectPicker } from "@/components/SubjectPicker";
 import { api, type GraphNode, type GraphData } from "@/lib/api";
 import { useLoading } from "@/hooks/useLoading";

@@ -300,7 +300,10 @@ class PDFProcessor:
     
     def _create_chunks_by_bookmarks(self, pages_text: List[str], bookmarks: List[Dict]) -> List[Dict]:
         """
-        按书签合并页面
+        按书签合并页面（页内精确切分）
+        
+        对于两个连续书签共享同一页的情况，通过正则在页面文本中定位章节标题，
+        将边界页内的文本按标题位置拆分，分别归属对应章节，避免跨节内容混入。
         
         Args:
             pages_text: 每页的 OCR 文本
@@ -314,17 +317,45 @@ class PDFProcessor:
         
         for i, bm in enumerate(tqdm(subsection_bms, desc="  合并页面", unit="个")):
             start_page = bm['page']
+            
             if i + 1 < len(subsection_bms):
-                end_page = subsection_bms[i + 1]['page'] - 1
+                next_bm = subsection_bms[i + 1]
+                next_start_page = next_bm['page']
             else:
-                end_page = len(pages_text)
+                next_bm = None
+                next_start_page = len(pages_text) + 1
             
             content_parts = []
-            for page_num in range(start_page, min(end_page + 1, len(pages_text) + 1)):
-                page_idx = page_num - 1
-                if 0 <= page_idx < len(pages_text):
-                    content_parts.append(pages_text[page_idx])
             
+            # 遍历从本节起始页到下一节起始页（含），以捕获跨页边界内容
+            for page_num in range(start_page, min(next_start_page + 1, len(pages_text) + 1)):
+                page_idx = page_num - 1
+                if not (0 <= page_idx < len(pages_text)):
+                    continue
+                
+                page_text = pages_text[page_idx]
+                
+                # 本节起始页：从本节标题处开始取，丢弃标题之前属于上一节的内容
+                if page_num == start_page:
+                    split_pos = self._find_heading_in_page(page_text, bm['title'])
+                    if split_pos is not None:
+                        page_text = page_text[split_pos:]
+                    # 若未找到标题，保守地保留整页（避免丢内容）
+                
+                # 下一节起始页：只取该页中下一节标题之前的内容，归属本节
+                if next_bm is not None and page_num == next_start_page:
+                    split_pos = self._find_heading_in_page(page_text, next_bm['title'])
+                    if split_pos is not None:
+                        page_text = page_text[:split_pos]
+                    else:
+                        # 在下一节起始页未找到下一节标题，说明整页已属于下一节，跳过
+                        continue
+                
+                if page_text.strip():
+                    content_parts.append(page_text)
+            
+            content = '\n'.join(content_parts)
+            page_end = (next_start_page - 1) if next_bm else len(pages_text)
             chunk = {
                 'chunk_id': f"{bm['subject_code']}_{bm['subsection']}",
                 'subject_code': bm['subject_code'],
@@ -335,13 +366,48 @@ class PDFProcessor:
                 'subsection': bm['subsection'],
                 'subsection_title': bm['subsection_title'],
                 'page_start': start_page,
-                'page_end': end_page,
-                'content': '\n'.join(content_parts),
-                'char_count': len('\n'.join(content_parts)),
+                'page_end': page_end,
+                'content': content,
+                'char_count': len(content),
             }
             chunks.append(chunk)
         
         return chunks
+    
+    def _find_heading_in_page(self, page_text: str, bm_title: str) -> Optional[int]:
+        """
+        在页面 OCR 文本中查找书签标题的起始字符位置
+        
+        先尝试严格行首匹配小节编号（如 "1.1.2"），再尝试宽松匹配以容忍
+        OCR 对标点的误识别（如全角句号、数字间多余空格）。
+        
+        Args:
+            page_text: 单页 OCR 文本
+            bm_title:  书签标题，如 "1.1.2 数据结构三要素"
+        
+        Returns:
+            匹配起始位置，未找到时返回 None
+        """
+        subsection_num = extract_subsection_number(bm_title)
+        if not subsection_num:
+            return None
+        
+        # 严格匹配：行首出现 "X.X.X"（含紧跟中文或空格）
+        escaped = re.escape(subsection_num)
+        match = re.search(r'(?m)^' + escaped, page_text)
+        if match:
+            return match.start()
+        
+        # 宽松匹配：兼容 OCR 将英文句号识别为全角、数字间有空格等情况
+        parts = subsection_num.split('.')
+        if len(parts) == 3:
+            loose = (r'(?m)^' + parts[0] + r'[.．\s]' +
+                     parts[1] + r'[.．\s]' + parts[2])
+            match = re.search(loose, page_text)
+            if match:
+                return match.start()
+        
+        return None
     
     def _smart_split_chunks(self, chunks: List[Dict]) -> List[Dict]:
         """

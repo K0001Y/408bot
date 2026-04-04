@@ -45,19 +45,43 @@ class AppState:
 
         # Skills 注册表（在 lifespan 中填充）
         self.skills: dict[str, Any] = {}
-        self._llm: Any = None               # LLM 实例（延迟创建）
+        self._llm: Any = None               # 默认 LLM 实例（延迟创建）
+        self._rag_llm: Any = None           # RAG 专用 LLM（延迟创建）
+        self._answer_llm: Any = None        # 问答专用 LLM（延迟创建）
 
     def is_ready(self) -> bool:
         """检查核心资源是否已就绪"""
         return self.chroma_collection is not None
 
     def get_llm(self) -> Any:
-        """延迟创建 LLM 实例"""
+        """延迟创建默认 LLM 实例"""
         if self._llm is None:
             from app.llm_factory import LLMFactory
             self._llm = LLMFactory.create_llm()
-            logger.info("LLM 实例延迟创建成功")
+            logger.info("默认 LLM 实例延迟创建成功")
         return self._llm
+
+    def get_llm_for_role(self, role: str) -> Any:
+        """
+        按角色延迟创建 LLM 实例。
+
+        Args:
+            role: "rag" | "answer" | "quiz"
+        """
+        if role == "rag":
+            if self._rag_llm is None:
+                from app.llm_factory import LLMFactory
+                self._rag_llm = LLMFactory.create_llm_for_role("rag")
+                logger.info("RAG 专用 LLM 创建成功")
+            return self._rag_llm
+        elif role in ("answer", "quiz"):
+            if self._answer_llm is None:
+                from app.llm_factory import LLMFactory
+                self._answer_llm = LLMFactory.create_llm_for_role("answer")
+                logger.info("问答专用 LLM 创建成功")
+            return self._answer_llm
+        else:
+            return self.get_llm()
 
     def get_skill(self, name: str) -> Any:
         """
@@ -88,7 +112,6 @@ class AppState:
             return  # 已初始化
 
         try:
-            llm = self.get_llm()
             retrieval_skill = self.skills.get("knowledge_retrieval")
             if not retrieval_skill:
                 logger.error("无法初始化 LLM Skills: knowledge_retrieval 不可用")
@@ -99,11 +122,15 @@ class AppState:
             from app.skills.smart_answer_skill import SmartAnswerSkill
             from app.skills.quiz_generation_skill import QuizGenerationSkill
 
-            basic = AnswerGenerationSkill(retrieval_skill, llm)
+            # 各角色使用独立 LLM 实例（若未配置专属 LLM 则共享默认实例）
+            rag_llm = self.get_llm_for_role("rag")
+            answer_llm = self.get_llm_for_role("answer")
+
+            basic = AnswerGenerationSkill(retrieval_skill, answer_llm)
             self.skills["answer_generation"] = basic
             logger.info("注册 Skill: answer_generation")
 
-            agentic = AgenticRAGSkill(retrieval_skill, llm)
+            agentic = AgenticRAGSkill(retrieval_skill, rag_llm)
             self.skills["agentic_rag"] = agentic
             logger.info("注册 Skill: agentic_rag")
 
@@ -111,7 +138,7 @@ class AppState:
             self.skills["smart_answer"] = smart
             logger.info("注册 Skill: smart_answer")
 
-            quiz = QuizGenerationSkill(retrieval_skill, llm)
+            quiz = QuizGenerationSkill(retrieval_skill, answer_llm)
             self.skills["quiz_generation"] = quiz
             logger.info("注册 Skill: quiz_generation")
 

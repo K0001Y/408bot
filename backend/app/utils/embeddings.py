@@ -95,8 +95,11 @@ def _get_raw_model(model):
         # 原生 SentenceTransformer
         return model
     if hasattr(model, "client") and hasattr(model.client, "encode"):
-        # LangChain HuggingFaceEmbeddings 包装器
+        # LangChain HuggingFaceEmbeddings 包装器 (旧版)
         return model.client
+    if hasattr(model, "_client") and hasattr(model._client, "encode"):
+        # LangChain HuggingFaceEmbeddings 包装器 (新版 langchain-huggingface)
+        return model._client
     raise TypeError(
         f"不支持的 Embedding 模型类型: {type(model).__name__}。"
         "需要 SentenceTransformer 或 HuggingFaceEmbeddings 实例"

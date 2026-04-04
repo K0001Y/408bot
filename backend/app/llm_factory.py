@@ -87,12 +87,15 @@ class LLMFactory:
                 detail="请在 config.yaml 中设置 llm.openai.api_key 或设置 OPENAI_API_KEY 环境变量",
             )
 
-        llm = ChatOpenAI(
+        kwargs = dict(
             model=actual_model,
             temperature=actual_temp,
             api_key=actual_key,
         )
-        logger.info("OpenAI LLM 创建成功 model=%s temperature=%s", actual_model, actual_temp)
+        if cfg.base_url:
+            kwargs["base_url"] = cfg.base_url
+        llm = ChatOpenAI(**kwargs)
+        logger.info("OpenAI LLM 创建成功 model=%s base_url=%s temperature=%s", actual_model, cfg.base_url, actual_temp)
         return llm
 
     @staticmethod
@@ -111,6 +114,75 @@ class LLMFactory:
         )
         logger.info("Ollama LLM 创建成功 model=%s base_url=%s temperature=%s", actual_model, base_url, actual_temp)
         return llm
+
+    @staticmethod
+    def create_llm_for_role(role: str) -> BaseChatModel:
+        """
+        根据角色创建 LLM 实例，支持 RAG 与问答使用不同 LLM。
+
+        Args:
+            role: "rag" | "answer" | "quiz"
+                - "rag"    → 优先使用 settings.rag_llm，否则 fallback 到 settings.llm
+                - "answer" / "quiz" → 优先使用 settings.answer_llm，否则 fallback 到 settings.llm
+
+        Returns:
+            BaseChatModel 实例
+        """
+        settings = get_settings()
+
+        if role == "rag" and settings.rag_llm:
+            llm_cfg = settings.rag_llm
+            logger.info("角色 '%s' 使用专属 LLM provider=%s", role, llm_cfg.provider)
+        elif role in ("answer", "quiz") and settings.answer_llm:
+            llm_cfg = settings.answer_llm
+            logger.info("角色 '%s' 使用专属 LLM provider=%s", role, llm_cfg.provider)
+        else:
+            logger.info("角色 '%s' 未配置专属 LLM，使用默认 LLM", role)
+            return LLMFactory.create_llm()
+
+        provider = llm_cfg.provider
+        try:
+            if provider == "openai":
+                cfg = llm_cfg.openai
+                from langchain_openai import ChatOpenAI
+                if not cfg.api_key:
+                    raise LLMError(
+                        message="OpenAI API Key 未配置",
+                        detail="请在 config.yaml 的 rag_llm/answer_llm 中设置 openai.api_key",
+                    )
+                kwargs = dict(
+                    model=cfg.model,
+                    temperature=cfg.temperature,
+                    api_key=cfg.api_key,
+                )
+                if cfg.base_url:
+                    kwargs["base_url"] = cfg.base_url
+                llm = ChatOpenAI(**kwargs)
+                logger.info("角色 '%s' OpenAI LLM 创建成功 model=%s base_url=%s", role, cfg.model, cfg.base_url)
+                return llm
+            elif provider == "ollama":
+                cfg = llm_cfg.ollama
+                from langchain_ollama import ChatOllama
+                llm = ChatOllama(
+                    model=cfg.model,
+                    base_url=cfg.base_url,
+                    temperature=cfg.temperature,
+                )
+                logger.info("角色 '%s' Ollama LLM 创建成功 model=%s base_url=%s", role, cfg.model, cfg.base_url)
+                return llm
+            else:
+                raise LLMError(
+                    message=f"不支持的 LLM provider: {provider}",
+                    detail=f"可选值: openai, ollama。当前值: {provider}",
+                )
+        except LLMError:
+            raise
+        except Exception as e:
+            logger.error("角色 '%s' LLM 创建失败 provider=%s error=%s", role, provider, str(e), exc_info=True)
+            raise LLMError(
+                message=f"LLM 创建失败 (role={role}): {provider}",
+                detail=str(e),
+            )
 
     @staticmethod
     def check_ollama_health() -> dict:

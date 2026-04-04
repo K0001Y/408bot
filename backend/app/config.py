@@ -22,6 +22,7 @@ BACKEND_DIR = Path(__file__).parent.parent.resolve()
 class OpenAIConfig(BaseModel):
     model: str = "gpt-4"
     api_key: str = ""
+    base_url: str | None = None   # OpenAI 兼容接口地址，如 dashscope/deepseek 等
     temperature: float = 0
 
 
@@ -102,6 +103,9 @@ class Settings(BaseModel):
 
     app: AppConfig = AppConfig()
     llm: LLMConfig = LLMConfig()
+    # 角色专属 LLM 覆盖（可选）。未配置时均 fallback 到 llm。
+    rag_llm: LLMConfig | None = None     # Agentic RAG 专用
+    answer_llm: LLMConfig | None = None  # 问答 / Quiz 专用
     embedding: EmbeddingConfig = EmbeddingConfig()
     vector_db: VectorDBConfig = VectorDBConfig()
     graph: GraphConfig = GraphConfig()

@@ -1,6 +1,6 @@
 # 408 考研辅助 Agent - 待处理清单
 
-> 最后更新: 2026-04-04
+> 最后更新: 2026-04-04 (API 集成测试通过 12/12)
 
 ---
 
@@ -15,38 +15,25 @@
 
 ## P0 - 阻塞性问题
 
-### 1. Ollama 运行环境修复
+### ~~1. Ollama 运行环境修复~~ (降级为非阻塞)
 - **现象**: Ollama 健康检查通过，但推理时报错 `fork/exec ollama: no such file or directory`
 - **原因**: Ollama runner 二进制文件缺失（系统环境问题）
 - **解决方案**: 重新安装或重启 Ollama 应用
 - **影响范围**: 所有 LLM 相关功能（知识问答、练习生成、试卷分析）
+- **状态**: 非阻塞 — 不配置 LLM 时基础功能（检索/图谱/错题本）正常运行
 
-### 2. Agentic RAG 与 ChatOllama 不兼容
-- **现象**: `create_react_agent` 调用 `bind_tools()` 时 ChatOllama 不支持
-- **原因**: `langchain_community.chat_models.ChatOllama` 是旧版实现，不支持工具绑定
-- **解决方案**:
-  ```bash
-  # 安装新版 langchain-ollama
-  uv add langchain-ollama
-  ```
-  然后将 `llm_factory.py` 中的导入改为:
-  ```python
-  from langchain_ollama import ChatOllama
-  ```
-- **影响范围**: Agentic RAG 路由（复杂问题的多步推理）
+### ~~2. Agentic RAG 与 ChatOllama 不兼容~~ (已修复)
+- **修复**: 已迁移至 `langchain-ollama` 包，`llm_factory.py` 已使用 `from langchain_ollama import ChatOllama`
 
 ---
 
 ## P1 - 重要功能
 
-### 3. LangChain 依赖包升级
-- [ ] 添加 `langchain-ollama` 到 `pyproject.toml`
-- [ ] 添加 `langgraph>=0.2.0` 到 `pyproject.toml`（Agentic RAG 依赖）
-- [ ] 将 `langchain-community` 中的 `ChatOllama` 迁移到 `langchain-ollama`
-- [ ] 将 `langchain-community` 中的 `HuggingFaceEmbeddings` 迁移到 `langchain-huggingface`
-  ```bash
-  uv add langchain-ollama langchain-huggingface langgraph
-  ```
+### 3. ~~LangChain 依赖包升级~~ (已完成)
+- [x] 添加 `langchain-ollama` 到 `pyproject.toml`
+- [x] 添加 `langgraph>=0.2.0` 到 `pyproject.toml`（Agentic RAG 依赖）
+- [x] 将 `langchain-community` 中的 `ChatOllama` 迁移到 `langchain-ollama`
+- [x] 将 `langchain-community` 中的 `HuggingFaceEmbeddings` 迁移到 `langchain-huggingface`
 
 ### 4. OCR 功能实现
 - **当前状态**: 试卷上传端点仅保存文件，未实现 OCR 文字识别
@@ -58,7 +45,7 @@
 
 ### 5. 错题本数据持久化验证
 - [ ] 验证 mistakes.db SQLite 数据库在并发写入下的稳定性
-- [ ] 添加数据库迁移机制（版本管理）
+- [ ] 添加数据库迁移机制（版本管理） — 已实现 V1/V2 自动迁移
 - [ ] 完善错题的编辑（更新）功能
 
 ### 6. 前端错误处理完善
@@ -159,3 +146,7 @@
 - [x] 知识图谱可视化（Cytoscape.js）
 - [x] 前端构建验证通过
 - [x] **前端 Detroit 风格重设计**（琥珀色主题、零圆角、扫描线、Exo 2 字体，所有页面完成）
+- [x] **HuggingFaceEmbeddings 兼容性修复** — `_get_raw_model()` 支持新版 `langchain-huggingface` 的 `_client` 属性
+- [x] **前端未使用导入清理** — 移除 `GraphPage.tsx` 中未使用的 `Badge` 导入
+- [x] **API 集成测试全部通过 (12/12)** — Health/Docs/Chapters/Search/ChunkDetail/Graph(3)/Practice/Mistakes(3)
+- [x] **启动文档 STARTUP.md** — 完整环境搭建、依赖安装、数据入库、LLM 配置、常见问题

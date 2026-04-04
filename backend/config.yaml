@@ -19,6 +19,53 @@ llm:
     base_url: "http://localhost:11434"
     temperature: 0
 
+rag_llm:
+  provider: "openai"
+  openai:
+    model: "qwen3-max"
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    api_key: "sk-02ce9ca711734424b26b5b181ac3bd4f"
+    temperature: 0
+answer_llm:
+  provider: "openai"
+  openai:
+    model: "qwen3-max"
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    api_key: "sk-02ce9ca711734424b26b5b181ac3bd4f"
+    temperature: 0
+
+# ── 角色专属 LLM（可选）──────────────────────────────────────────────────────
+# 不配置时，rag_llm 和 answer_llm 均 fallback 到上方 llm 配置。
+#
+# 示例 A：RAG 用本地模型 + 问答用 OpenAI
+# rag_llm:
+#   provider: "ollama"
+#   ollama:
+#     model: "deepseek-r1:8b"
+#     base_url: "http://localhost:11434"
+#     temperature: 0
+# answer_llm:
+#   provider: "openai"
+#   openai:
+#     model: "gpt-4o"
+#     api_key: ${OPENAI_API_KEY}
+#     temperature: 0
+#
+# 示例 B：RAG 用 OpenAI + 问答用本地模型
+# rag_llm:
+#   provider: "openai"
+#   openai:
+#     model: "gpt-4o"
+#     api_key: ${OPENAI_API_KEY}
+#     temperature: 0
+# answer_llm:
+#   provider: "ollama"
+#   ollama:
+#     model: "qwen2.5:14b"
+#     base_url: "http://localhost:11434"
+#     temperature: 0
+# ────────────────────────────────────────────────────────────────────────────
+
 # Embedding 配置
 embedding:
   model_name: "BAAI/bge-large-zh-v1.5"
