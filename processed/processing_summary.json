@@ -1,0 +1,81 @@
+[
+  {
+    "subject": "数据结构",
+    "total_chunks": 176,
+    "avg_tokens": 1213,
+    "min_tokens": 0,
+    "max_tokens": 9222,
+    "content_types": {
+      "concept": 14,
+      "table": 126,
+      "answer": 29,
+      "code": 7
+    },
+    "features": {
+      "has_code": 54,
+      "has_table": 126,
+      "has_image_ref": 54,
+      "has_formula": 162
+    }
+  },
+  {
+    "subject": "操作系统",
+    "total_chunks": 130,
+    "avg_tokens": 1625,
+    "min_tokens": 0,
+    "max_tokens": 12711,
+    "content_types": {
+      "concept": 6,
+      "table": 93,
+      "answer": 26,
+      "exercise": 1,
+      "summary": 2,
+      "code": 2
+    },
+    "features": {
+      "has_code": 2,
+      "has_table": 93,
+      "has_image_ref": 41,
+      "has_formula": 112
+    }
+  },
+  {
+    "subject": "计算机组成原理",
+    "total_chunks": 164,
+    "avg_tokens": 1229,
+    "min_tokens": 0,
+    "max_tokens": 7346,
+    "content_types": {
+      "concept": 13,
+      "table": 120,
+      "answer": 28,
+      "code": 2,
+      "exercise": 1
+    },
+    "features": {
+      "has_code": 6,
+      "has_table": 120,
+      "has_image_ref": 39,
+      "has_formula": 152
+    }
+  },
+  {
+    "subject": "计算机网络",
+    "total_chunks": 157,
+    "avg_tokens": 1172,
+    "min_tokens": 48,
+    "max_tokens": 11811,
+    "content_types": {
+      "concept": 5,
+      "table": 122,
+      "answer": 29,
+      "exercise": 1
+    },
+    "features": {
+      "has_code": 0,
+      "has_table": 122,
+      "has_image_ref": 53,
+      "has_formula": 146
+    }
+  }
+]
