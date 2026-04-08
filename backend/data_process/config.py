@@ -8,7 +8,7 @@ from pathlib import Path
 # ============ 基础路径配置 ============
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data"
-OUTPUT_DIR = BASE_DIR / "processed"
+OUTPUT_DIR = Path(__file__).parent / "processed"
 TEMP_DIR = Path("/tmp/408_ocr")
 
 # ============ 处理参数配置 ============

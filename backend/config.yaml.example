@@ -1,0 +1,77 @@
+# 408 考研辅助 Agent 配置示例
+# 使用说明：
+# 1. 复制此文件为 config.yaml: cp config.yaml.example config.yaml
+# 2. 编辑 config.yaml，填入你的实际配置（尤其是 API Key）
+# 3. config.yaml 已被 .gitignore 排除，不会上传到 GitHub
+
+app:
+  name: "408考研辅助Agent"
+  version: "0.1.0"
+  debug: true
+  cors_origins:
+    - "http://localhost:5173"
+    - "http://localhost:3000"
+
+# LLM 配置
+llm:
+  provider: "ollama"  # 可选: openai, ollama
+  openai:
+    model: "gpt-4"
+    api_key: ${OPENAI_API_KEY}  # 从环境变量读取
+    temperature: 0
+  ollama:
+    model: "deepseek-r1:8b"
+    base_url: "http://localhost:11434"
+    temperature: 0
+
+# RAG 检索专用 LLM（可选，不配置则使用上方 llm）
+rag_llm:
+  provider: "ollama"
+  ollama:
+    model: "deepseek-r1:8b"
+    base_url: "http://localhost:11434"
+    temperature: 0
+
+# 答案生成专用 LLM（可选，不配置则使用上方 llm）
+answer_llm:
+  provider: "ollama"  # 或 "openai"
+  ollama:
+    model: "deepseek-r1:8b"
+    base_url: "http://localhost:11434"
+    temperature: 0
+  # 如果使用 OpenAI，取消注释以下部分：
+  # openai:
+  #   model: "qwen3-max"  # 或其他模型
+  #   base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"  # 或其他兼容端点
+  #   api_key: ${OPENAI_API_KEY}  # 从环境变量读取，不要硬编码！
+  #   temperature: 0
+
+# Embedding 配置
+embedding:
+  model_name: "BAAI/bge-large-zh-v1.5"
+  device: "auto"  # auto, cpu, cuda, mps
+
+# 向量数据库配置
+vector_db:
+  persist_directory: "./data/vector_db"
+  collection_name: "408_knowledge"
+
+# 知识图谱配置
+graph:
+  graph_json_path: "./data/graph/knowledge_graph.json"
+  max_depth: 2
+
+# 错题本配置
+mistakes:
+  db_path: "./data/mistakes.db"
+
+# 数据源配置
+data:
+  chunks_dir: "./data_process/processed"
+
+# 日志配置
+logging:
+  level: "INFO"
+  log_file: "./logs/app.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 7

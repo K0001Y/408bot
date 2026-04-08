@@ -70,7 +70,7 @@ class MistakesConfig(BaseModel):
 
 
 class DataConfig(BaseModel):
-    chunks_dir: str = "../processed"
+    chunks_dir: str = "./data_process/processed"
 
     @property
     def abs_chunks_dir(self) -> Path:

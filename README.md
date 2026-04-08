@@ -70,13 +70,23 @@
 │   ├── scripts/
 │   │   ├── ingest_chunks.py  # 数据入库脚本
 │   │   └── build_graph.py    # 知识图谱构建脚本
+│   ├── data_process/         # 数据预处理模块（已整合到后端）
+│   │   ├── pdf_processor.py  # PDF 解析 + 分块
+│   │   ├── processed/        # 处理后的 chunks JSON
+│   │   │   ├── ds_chunks.json
+│   │   │   ├── os_chunks.json
+│   │   │   ├── co_chunks.json
+│   │   │   └── cn_chunks.json
+│   │   ├── config.py
+│   │   └── utils.py
 │   ├── data/                 # 运行时数据
 │   │   ├── vector_db/        # ChromaDB 持久化
 │   │   ├── graph/            # 知识图谱 JSON
 │   │   ├── mistakes.db       # 错题 SQLite
 │   │   ├── exports/          # 导出的 Word 文件
 │   │   └── uploads/          # 上传的试卷文件
-│   └── config.yaml           # 应用配置
+│   ├── config.yaml           # 应用配置（本地使用，已加入 .gitignore）
+│   └── config.yaml.example   # 配置示例模板
 │
 ├── frontend/                 # 前端应用
 │   ├── src/
@@ -87,14 +97,10 @@
 │   │   └── lib/              # API 客户端 + 常量 + 工具
 │   └── vite.config.ts        # Vite 配置 (API 代理)
 │
-├── data_process/             # 数据预处理
-│   ├── pdf_processor.py      # PDF 解析 + 分块
-│   ├── config.py
-│   └── utils.py
-│
-├── data/                     # 原始 PDF 教材
-├── processed/                # 处理后的 chunks JSON
-└── agent_spec.md             # 完整技术规格文档
+└── doc/                      # 文档
+    ├── STARTUP.md            # 启动指南
+    ├── TODO.md
+    └── agent_spec.md         # 完整技术规格文档
 ```
 
 ## 快速开始
@@ -244,11 +250,14 @@ export HF_ENDPOINT=https://hf-mirror.com
 ## 数据流
 
 ```
-PDF 教材 → pdf_processor.py → chunks JSON → ingest_chunks.py → ChromaDB
-                                           → build_graph.py  → knowledge_graph.json
+PDF 教材 → backend/data_process/pdf_processor.py → backend/data_process/processed/*.json
+                                                  → scripts/ingest_chunks.py → ChromaDB
+                                                  → scripts/build_graph.py   → knowledge_graph.json
 ```
 
 四科教材对应的 subject 代码: `ds`(数据结构), `os`(操作系统), `co`(组成原理), `cn`(计算机网络)
+
+> **注意**: 数据预处理模块已整合到 `backend/data_process/` 目录下，处理后的 chunks JSON 文件位于 `backend/data_process/processed/`。
 
 ## 开发指南
 

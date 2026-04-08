@@ -20,11 +20,10 @@ llm:
     temperature: 0
 
 rag_llm:
-  provider: "openai"
-  openai:
-    model: "qwen3-max"
-    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    api_key: "sk-02ce9ca711734424b26b5b181ac3bd4f"
+  provider: "ollama"
+  ollama:
+    model: "deepseek-r1:8b"
+    base_url: "http://localhost:11434"
     temperature: 0
 answer_llm:
   provider: "openai"
@@ -87,7 +86,7 @@ mistakes:
 
 # 数据源配置
 data:
-  chunks_dir: "../processed"
+  chunks_dir: "./data_process/processed"
 
 # 日志配置
 logging:
