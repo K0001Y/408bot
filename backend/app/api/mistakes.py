@@ -39,10 +39,12 @@ EXPORT_DIR = BACKEND_DIR / "data" / "exports"
 
 # ──────────── 解析输入格式 ────────────
 
-def parse_mistake_input(raw: str) -> tuple[int, str, list[int]]:
+def parse_mistake_input(raw: str) -> tuple[int | None, str, list[int]]:
     """
-    解析错题输入格式: "页码 章节 题号1 题号2 ..."
-    例如: "156 3.4 5 6 7" → (156, "3.4", [5, 6, 7])
+    解析错题输入格式: "[页码] 章节 题号1 题号2 ..."
+    支持两种格式:
+    - 带页码: "156 3.4 5 6 7" → (156, "3.4", [5, 6, 7])
+    - 无页码: "3.4 5 6 7" → (None, "3.4", [5, 6, 7])
 
     Returns:
         (page, chapter, question_numbers)
@@ -51,22 +53,42 @@ def parse_mistake_input(raw: str) -> tuple[int, str, list[int]]:
         InputFormatError: 格式不正确
     """
     parts = raw.strip().split()
-    if len(parts) < 3:
+    if len(parts) < 2:
         raise InputFormatError(
             message="输入格式错误",
-            detail=f"期望格式: '页码 章节 题号1 题号2 ...'，如 '156 3.4 5 6 7'。实际输入: '{raw}'",
+            detail=f"期望格式: '章节 题号1 题号2 ...'，如 '3.4 5 6 7'。可选页码前缀如 '156 3.4 5'。实际输入: '{raw}'",
         )
 
-    try:
-        page = int(parts[0])
-    except ValueError:
+    # 判断第一部分是页码还是章节
+    # 章节格式: 数字.数字 (如 "3.4")
+    # 页码格式: 纯数字 (如 "156")
+    first_part = parts[0]
+    second_part = parts[1] if len(parts) > 1 else ""
+
+    # 如果第二部分符合章节格式，则第一部分是页码
+    if re.match(r"^\d+(\.\d+)*$", second_part):
+        # 格式: 页码 章节 题号...
+        try:
+            page = int(first_part)
+        except ValueError:
+            raise InputFormatError(
+                message="页码必须是整数",
+                detail=f"页码='{first_part}'",
+            )
+        chapter = second_part
+        question_parts = parts[2:]
+    elif re.match(r"^\d+(\.\d+)*$", first_part):
+        # 格式: 章节 题号...（无页码）
+        page = None
+        chapter = first_part
+        question_parts = parts[1:]
+    else:
         raise InputFormatError(
-            message="页码必须是整数",
-            detail=f"页码='{parts[0]}'",
+            message="章节格式不正确",
+            detail=f"无法识别的格式，期望 '章节 题号...' 或 '页码 章节 题号...'，实际输入: '{raw}'",
         )
 
-    chapter = parts[1]
-    # 验证章节格式 (如 "3", "3.4", "12.1")
+    # 验证章节格式
     if not re.match(r"^\d+(\.\d+)*$", chapter):
         raise InputFormatError(
             message="章节格式不正确",
@@ -74,7 +96,7 @@ def parse_mistake_input(raw: str) -> tuple[int, str, list[int]]:
         )
 
     question_numbers = []
-    for p in parts[2:]:
+    for p in question_parts:
         try:
             question_numbers.append(int(p))
         except ValueError:
@@ -156,14 +178,14 @@ async def add_mistakes(req: MistakeCreate, request: Request):
                  question_text, answer_text)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
                 """,
-                (mistake_id, req.subject_code, page, chapter, q_num,
+                (mistake_id, req.subject_code, page if page is not None else 0, chapter, q_num,
                  question_text, answer_text),
             )
 
             added_items.append(MistakeItem(
                 mistake_id=mistake_id,
                 subject_code=req.subject_code,
-                page=page,
+                page=page if page is not None else 0,
                 chapter=chapter,
                 question_number=q_num,
                 question_text=question_text,
@@ -207,10 +229,11 @@ async def list_mistakes(
 
     mistakes = []
     for row in rows:
+        page_val = row["page"]
         mistakes.append(MistakeItem(
             mistake_id=row["mistake_id"],
             subject_code=row["subject_code"],
-            page=row["page"],
+            page=page_val if page_val != 0 else None,
             chapter=row["chapter"],
             question_number=row["question_number"],
             question_text=row["question_text"] or "",
@@ -295,10 +318,11 @@ async def update_mistake(mistake_id: str, req: MistakeUpdate, request: Request):
         async with db.execute("SELECT * FROM mistakes WHERE mistake_id = ?", (mistake_id,)) as cur:
             row = await cur.fetchone()
 
+    page_val = row["page"]
     return MistakeItem(
         mistake_id=row["mistake_id"],
         subject_code=row["subject_code"],
-        page=row["page"],
+        page=page_val if page_val != 0 else None,
         chapter=row["chapter"],
         question_number=row["question_number"],
         question_text=row["question_text"] or "",

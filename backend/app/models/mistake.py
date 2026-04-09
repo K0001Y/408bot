@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 
 class MistakeCreate(BaseModel):
     """错题添加请求"""
-    input: str = Field(..., description="输入格式: '页面 章节 题号1 题号2 ...'，如 '156 3.4 5 6 7'")
+    input: str = Field(..., description="输入格式: '章节 题号1 题号2 ...'，如 '3.4 5 6 7'（可选页码前缀，如 '156 3.4 5'）")
     subject_code: str = Field(..., description="科目代码: ds/os/co/cn")
 
 
@@ -24,7 +24,7 @@ class MistakeItem(BaseModel):
     """单条错题"""
     mistake_id: str
     subject_code: str
-    page: int
+    page: int | None = None
     chapter: str
     question_number: int
     question_text: str = ""
